@@ -1,0 +1,8 @@
+@inproceedings{wang2020reliable,
+  title={Reliable frame-to-frame motion estimation for vehicle-mounted surround-view camera systems},
+  author={Wang, Yifu and Huang, Kun and Peng, Xin and Li, Hongdong and Kneip, Laurent},
+  booktitle={2020 IEEE International conference on robotics and automation (ICRA)},
+  pages={1660--1666},
+  year={2020},
+  organization={IEEE}
+}

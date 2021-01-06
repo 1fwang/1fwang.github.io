@@ -1,0 +1,8 @@
+@inproceedings{wang2017scale,
+  title={On scale initialization in non-overlapping multi-perspective visual odometry},
+  author={Wang, Yifu and Kneip, Laurent},
+  booktitle={International Conference on Computer Vision Systems},
+  pages={144--157},
+  year={2017},
+  organization={Springer}
+}

@@ -1,0 +1,8 @@
+@inproceedings{peng2020globally,
+  title={Globally-Optimal Event Camera Motion Estimation},
+  author={Peng, Xin and Wang, Yifu and Gao, Ling and Kneip, Laurent},
+  booktitle={European Conference on Computer Vision},
+  pages={51--67},
+  year={2020},
+  organization={Springer}
+}

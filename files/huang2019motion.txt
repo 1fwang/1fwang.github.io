@@ -1,0 +1,7 @@
+@inproceedings{huang2019motion,
+  title={Motion estimation of non-holonomic ground vehicles from a single feature correspondence measured over n views},
+  author={Huang, Kun and Wang, Yifu and Kneip, Laurent},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={12706--12715},
+  year={2019}
+}
