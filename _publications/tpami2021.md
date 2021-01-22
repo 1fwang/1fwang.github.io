@@ -9,8 +9,8 @@ venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
 paperurl: https://ieeexplore.ieee.org/document/9329204
 citation: 
 youtubeId: 
-header:
-   teaser: tpami2021_t.jpg
+#header:
+#   teaser: tpami2021_t.jpg
 ---
 
 <a href="https://1fwang.github.io/files/tpami2021.pdf" target="_blank"><b>[PDF]</b></a>&emsp;
