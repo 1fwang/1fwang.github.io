@@ -17,13 +17,14 @@ redirect_from:
 <!--* When I’m not doing research I enjoy a variety of hobbies, especially playing soccer and photography. I am also interested in trying new things :-)-->
 
 # Recent News
-* We have one paper accepted with by T-PAMI! (Jan 2021) 
+* We have one paper accepted by ICRA 2021! (Feb 2021) 
+* We have one paper accepted by T-PAMI! (Jan 2021) 
 * <span style="color:red">My PhD program is coming to the end soon and I will begin working as a Postdoctoral researcher at [ShanghaiTech University](https://www.shanghaitech.edu.cn/) in the new year.</span> (Oct 2020)
-* We have one paper accepted in ECCV 2020! (Jun 2020)
-* We have one paper accepted in ICRA 2020! (Jan 2020)
-* We have one paper accepted in CVPR 2019! (Feb 2019)
+* We have one paper accepted by ECCV 2020! (Jun 2020)
+* We have one paper accepted by ICRA 2020! (Jan 2020)
+* We have one paper accepted by CVPR 2019! (Feb 2019)
 * <span style="color:red">We receive the Best Student Paper Award / Best Paper Finalist at ICVS 2017!</span> (Jul 2017)
-* We have one paper accepted in ICVS 2017! (May 2017)
+* We have one paper accepted by ICVS 2017! (May 2017)
 
 # Academic Services
 * Conference Reviewer: ICRA 2020, CVPR 2021, ICRA 2021, ICCV 2021.
