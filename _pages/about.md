@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 # About Me
-* I am a Postdoc Research Fellow at [Mobile Perception Lab (MPL)](http://mpl.sist.shanghaitech.edu.cn/) in [ShanghaiTech University](https://www.shanghaitech.edu.cn/).
+* I am a Postdoc Research Fellow in [Mobile Perception Lab (MPL)](http://mpl.sist.shanghaitech.edu.cn/) at [ShanghaiTech University](https://www.shanghaitech.edu.cn/).
 * I received my Ph.D. degree from College of Engineering and Computer Science at [Australian National University](https://www.anu.edu.au/), advised by Prof. [Laurent Kneip](http://mpl.sist.shanghaitech.edu.cn/Director.html) and Prof. [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/). <br> 
 [[My Curriculum Vitae](http://1fwang.github.io/files/Yifu_Wang_CV.pdf)] [[My Google Scholar](https://scholar.google.com/citations?user=_0BWh_8AAAAJ&hl=en)]
 * I received my B.Eng. Degrees from both [Beijing Institute of Technology](https://english.bit.edu.cn/) and Australian National University. In the last two year of my PhD, I visited the Mobile Perception Lab (MPL) at ShanghaiTech University, to jointly collaborate with Prof. Laurent Kneip.
