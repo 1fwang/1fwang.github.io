@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Yifu Wang"
+title                    : "Dr. Yifu Wang"
 title_separator          : "-"
 name                     : &name "Yifu Wang"
-description              : &description "Ph.D candidate at the Australian National University"
+description              : &description "Ph.D. in the Australian National University"
 url                      : https://1fwang.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/1fwang.github.io"
