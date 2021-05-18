@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Dr. Yifu Wang"
+title                    : "Yifu Wang"
 title_separator          : "-"
 name                     : &name "Yifu Wang"
-description              : &description "Ph.D. in the Australian National University"
+description              : &description "Ph.D. in College of Engineering and Computer Science, ANU"
 url                      : https://1fwang.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/1fwang.github.io"
@@ -77,9 +77,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Yifu Wang (王一夫|Ian)"
+  name             : "Dr. Yifu Wang (王一夫|Ian)"
   avatar           : "yifu-avatar.jpg"
-  bio              : "Ph.D. candidate, College of Engineering and Computer Science, ANU"
+  bio              : "Ph.D. in College of Engineering and Computer Science, ANU"
   location         : "Canberra, Australia"
   employer         : 
   googlescholar    : "https://scholar.google.com/citations?user=_0BWh_8AAAAJ&hl=en"
