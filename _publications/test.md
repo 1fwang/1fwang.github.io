@@ -1,6 +1,6 @@
 ---
 title: "Motion estimation of non-holonomic ground vehicles from a single feature correspondence measured over n views"
-author: "<b>Yifu Wang</b>\\*, Wenqing Jiang\\*, Kun Huang, Sören Schwertfeger, Laurent Kneip."
+author: "Kun Huang, <b>Yifu Wang</b>, Laurent Kneip."
 collection: publications
 permalink: /test
 excerpt: 
@@ -10,7 +10,7 @@ paperurl: https://openaccess.thecvf.com/content_CVPR_2019/html/Huang_Motion_Esti
 citation: 
 youtubeId: 
 #header:
-#   teaser: icra2022a_t.jpg
+#   teaser: cvpr2019_t.jpg
 ---
 
 <a href="https://1fwang.github.io/files/icra2022a.pdf" target="_blank"><b>[PDF]</b></a>&emsp;
