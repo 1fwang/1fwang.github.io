@@ -2,9 +2,9 @@
 title: "Globally-Optimal Event Camera Motion Estimation"
 author: "Xin Peng\\*, <b>Yifu Wang</b>\\*, Ling Gao\\* and Laurent Kneip."
 collection: publications
-permalink: /eccv2020
+permalink: /test
 excerpt: 
-date: 2020-08-23
+date: 2022-08-23
 venue: European Conference on Computer Vision
 paperurl: https://link.springer.com/chapter/10.1007/978-3-030-58574-7_4
 citation: 
