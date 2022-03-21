@@ -4,7 +4,7 @@ author: "<b>Yifu Wang</b>, Jiaqi Yang, Xin Peng, Peng Wu, Ling Gao, Kun Huang, J
 collection: publications
 permalink: /arxiv2021
 excerpt: 
-date: 2022-07-07
+date: 2021-07-07
 venue: Arxiv paper
 paperurl: https://arxiv.org/abs/2107.03011
 citation: 
