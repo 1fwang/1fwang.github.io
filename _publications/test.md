@@ -4,8 +4,8 @@ author: "Kun Huang, <b>Yifu Wang</b>, Laurent Kneip."
 collection: publications
 permalink: /test
 excerpt: 
-date: 2019-06-21
-venue: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
+date: 2022-05-23
+venue: 2022 IEEE International conference on robotics and automation (ICRA)
 paperurl: https://arxiv.org/abs/2202.00886
 citation: 
 youtubeId: 
