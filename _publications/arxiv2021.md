@@ -1,12 +1,12 @@
 ---
-title: "Dynamic Event Camera Calibration"
+title: "Visual Odometry with an Event Camera Using Continuous Ray Warping and Volumetric Contrast Maximization"
 author: "Kun Huang, <b>Yifu Wang</b>, Laurent Kneip."
 collection: publications
-permalink: /iros2021
+permalink: /arxiv2021
 excerpt: 
-date: 2021-09-23
-venue: 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
-paperurl: https://ieeexplore.ieee.org/abstract/document/9636398
+date: 2021-07-07
+venue: Arxiv paper
+paperurl: https://arxiv.org/abs/2107.03011
 citation: 
 youtubeId: 
 #header:
