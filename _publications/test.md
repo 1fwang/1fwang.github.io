@@ -1,5 +1,5 @@
 ---
-title: "Motion estimation of non-holonomic ground vehicles from a single feature correspondence measured over n views"
+title: "Accurate calibration of multi-perspective cameras from a generalization of the hand-eye constraint"
 author: "Kun Huang, <b>Yifu Wang</b>, Laurent Kneip."
 collection: publications
 permalink: /test
