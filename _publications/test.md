@@ -1,10 +1,10 @@
 ---
-title: "Motion estimation of non-holonomic ground vehicles from a single feature correspondence measured over n views"
+title: "Accurate calibration of multi-perspective cameras from a generalization of the hand-eye constraint"
 author: "<b>Yifu Wang</b>\\*, Wenqing Jiang\\*, Kun Huang, Sören Schwertfeger, Laurent Kneip."
 collection: publications
 permalink: /test
 excerpt: 
-date: 2022-06-21
+date: 2022-05-23
 venue: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
 paperurl: https://openaccess.thecvf.com/content_CVPR_2019/html/Huang_Motion_Estimation_of_Non-Holonomic_Ground_Vehicles_From_a_Single_Feature_CVPR_2019_paper.html
 citation: 
