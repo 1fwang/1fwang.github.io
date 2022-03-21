@@ -1,20 +1,20 @@
 ---
 title: "Motion estimation of non-holonomic ground vehicles from a single feature correspondence measured over n views"
-author: "Kun Huang, <b>Yifu Wang</b>, Laurent Kneip."
+author: "<b>Yifu Wang</b>\\*, Wenqing Jiang\\*, Kun Huang, Sören Schwertfeger, Laurent Kneip."
 collection: publications
 permalink: /test
 excerpt: 
-date: 2023-06-21
+date: 2022-05-23
 venue: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
 paperurl: https://openaccess.thecvf.com/content_CVPR_2019/html/Huang_Motion_Estimation_of_Non-Holonomic_Ground_Vehicles_From_a_Single_Feature_CVPR_2019_paper.html
 citation: 
 youtubeId: 
 #header:
-#   teaser: cvpr2019_t.jpg
+#   teaser: icra22a_t.jpg
 ---
 
-<a href="https://1fwang.github.io/files/cvpr2019.pdf" target="_blank"><b>[PDF]</b></a>&emsp;
-<a href="https://1fwang.github.io/files/huang2019motion.txt" target="_blank"><b>[BibTex]</b></a>
+<a href="https://1fwang.github.io/files/icra22a.pdf" target="_blank"><b>[PDF]</b></a>&emsp;
+<a href="https://1fwang.github.io/files/wang2022accurate.txt" target="_blank"><b>[BibTex]</b></a>
 
 ![firenet_banner](/images/cvpr2019.jpg){:class="img-responsive"}
 
