@@ -2,7 +2,7 @@
 title: "Accurate calibration of multi-perspective cameras from a generalization of the hand-eye constraint"
 author: "<b>Yifu Wang</b>\\*, Wenqing Jiang\\*, Kun Huang, Sören Schwertfeger, Laurent Kneip."
 collection: publications
-permalink: /icra2022_1
+permalink: /icra2022a
 excerpt: 
 date: 2022-05-23
 venue: 2022 IEEE International conference on robotics and automation (ICRA)
