@@ -1,0 +1,6 @@
+@article{wang2022accurate,
+  title={Accurate calibration of surround view camera systems from a generalization of the hand eye constraint},
+  author={Wang, Yifu and Jiang, Wenqing and Huang, Kun and Schwertfeger, Soren and Kneip, Laurent},
+  journal={arXiv preprint arXiv:2202.00886},
+  year={2022}
+}

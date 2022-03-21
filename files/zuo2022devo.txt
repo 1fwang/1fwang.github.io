@@ -1,0 +1,6 @@
+@article{zuo2022devo,
+  title={DEVO: Depth-Event Camera Visual Odometry in Challenging Conditions},
+  author={Zuo, Yi-Fan and Yang, Jiaqi and Chen, Jiaben and Wang, Xia and Wang, Yifu and Kneip, Laurent},
+  journal={arXiv preprint arXiv:2202.02556},
+  year={2022}
+}

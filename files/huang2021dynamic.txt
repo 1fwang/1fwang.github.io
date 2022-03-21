@@ -1,0 +1,8 @@
+@inproceedings{huang2021dynamic,
+  title={Dynamic Event Camera Calibration},
+  author={Huang, Kun and Wang, Yifu and Kneip, Laurent},
+  booktitle={2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={7021--7028},
+  year={2021},
+  organization={IEEE}
+}

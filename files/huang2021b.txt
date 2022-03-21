@@ -1,0 +1,8 @@
+@inproceedings{huang2021b,
+  title={B-splines for Purely Vision-based Localization and Mapping on Non-holonomic Ground Vehicles},
+  author={Huang, Kun and Wang, Yifu and Kneip, Laurent},
+  booktitle={2021 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={5374--5380},
+  year={2021},
+  organization={IEEE}
+}
