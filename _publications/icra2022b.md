@@ -2,7 +2,7 @@
 title: "DEVO: Depth-Event Camera Visual Odometry in Challenging Conditions"
 author: "Yifan Zuo\\*, Jiaqi Yang\\*, Jiaben Chen, Xia Wang, <b>Yifu Wang</b>\\#, Laurent Kneip\\#."
 collection: publications
-permalink: /icra2022_2
+permalink: /icra2022b
 excerpt: 
 date: 2022-05-23
 venue: 2022 IEEE International conference on robotics and automation (ICRA)
