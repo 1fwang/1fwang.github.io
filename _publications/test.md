@@ -1,6 +1,6 @@
 ---
 title: "Motion estimation of non-holonomic ground vehicles from a single feature correspondence measured over n views"
-author: "<b>Yifu Wang</b>\\*, Wenqing Jiang\\*, Kun Huang, Sören Schwertfeger, Laurent Kneip."
+author: "Kun Huang, <b>Yifu Wang</b>, Laurent Kneip."
 collection: publications
 permalink: /test
 excerpt: 
