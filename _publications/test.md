@@ -6,7 +6,7 @@ permalink: /test
 excerpt: 
 date: 2019-06-21
 venue: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
-paperurl: https://openaccess.thecvf.com/content_CVPR_2019/html/Huang_Motion_Estimation_of_Non-Holonomic_Ground_Vehicles_From_a_Single_Feature_CVPR_2019_paper.html
+paperurl: https://arxiv.org/abs/2202.00886
 citation: 
 youtubeId: 
 #header:
