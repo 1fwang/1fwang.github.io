@@ -4,7 +4,7 @@ author: "<b>Yifu Wang</b>\\*, Wenqing Jiang\\*, Kun Huang, Sören Schwertfeger, 
 collection: publications
 permalink: /icra2022a
 excerpt: 
-date: 2021-05-23
+date: 2022-05-23
 venue: 2022 IEEE International conference on robotics and automation (ICRA)
 paperurl: https://arxiv.org/abs/2202.00886
 citation: 
