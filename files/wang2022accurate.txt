@@ -1,5 +1,5 @@
 @article{wang2022accurate,
-  author={Wang, Yifu and Jiang, Wenqing and Huang, Kun and Schwertfeger, S&#x00F6;ren and Kneip, Laurent},
+  author={Wang, Yifu and Jiang, Wenqing and Huang, Kun and Schwertfeger, S{\"o}ren and Kneip, Laurent},
   booktitle={2022 International Conference on Robotics and Automation (ICRA)}, 
   title={Accurate Calibration of Multi-Perspective Cameras from a Generalization of the Hand-Eye Constraint}, 
   year={2022},
