@@ -1,6 +1,6 @@
 @inproceedings{zuo2022devo,
   title={DEVO: Depth-Event Camera Visual Odometry in Challenging Conditions},
-  author={Zuo, Yi--Fan and Yang, Jiaqi and Chen, Jiaben and Wang, Xia and Wang, Yifu and Kneip, Laurent},
+  author={Zuo, Yi-Fan and Yang, Jiaqi and Chen, Jiaben and Wang, Xia and Wang, Yifu and Kneip, Laurent},
   booktitle={2022 International Conference on Robotics and Automation (ICRA)},
   pages={2179--2185},
   year={2022},
