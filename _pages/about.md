@@ -17,6 +17,7 @@ redirect_from:
 <!--* When I’m not doing research I enjoy a variety of hobbies, especially playing soccer and photography. I am also interested in trying new things :-)-->
 
 # Recent News
+* We have one papers accepted by Sensors 2022! (Jul 2022) 
 * We have two papers accepted by ICRA 2022! (Feb 2022) 
 * We have one paper  accepted by IROS 2021! (Jun 2021) 
 * We have one paper  accepted by ICRA 2021! (Feb 2021) 
