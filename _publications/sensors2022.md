@@ -2,10 +2,10 @@
 title: "Visual Odometry with an Event Camera Using Continuous Ray Warping and Volumetric Contrast Maximization"
 author: "<b>Yifu Wang</b>, Jiaqi Yang, Xin Peng, Peng Wu, Ling Gao, Kun Huang, Jiaben Chen, Laurent Kneip."
 collection: publications
-permalink: /arxiv2021
+permalink: /sensors2022
 excerpt: 
-date: 2021-07-23
-venue: Arxiv paper
+date: 2022-07-26
+venue: Sensors
 paperurl: https://arxiv.org/abs/2107.03011
 citation: 
 youtubeId: 
