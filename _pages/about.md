@@ -16,17 +16,18 @@ redirect_from:
 
 
 # Recent News
+* I joined XR Vision Labs of Tencent in Aug. 2022.
 * We have one paper  accepted by Sensors 2022! (Jul 2022) 
-* We have two papers accepted by ICRA 2022! (Feb 2022) 
+* We have two papers accepted by ICRA 2022! (Feb 2022)
+* I joined Motovis Intelligent Technologies as a SLAM Technical Consultant in Nov. 2021. 
 * We have one paper  accepted by IROS 2021! (Jun 2021) 
+* I joined Shanghai Institute of Microsystem and Information Technology, Chinese Academy of Sciences as a Post-Doc researcher in Apr. 2021.
 * We have one paper  accepted by ICRA 2021! (Feb 2021) 
 * We have one paper  accepted by T-PAMI! (Jan 2021) 
-* <span style="color:red">My PhD program is coming to the end soon and I will begin working as a Postdoctoral researcher at [ShanghaiTech University](https://www.shanghaitech.edu.cn/) in the new year.</span> (Oct 2020)
 * We have one paper  accepted by ECCV 2020! (Jun 2020)
 * We have one paper  accepted by ICRA 2020! (Jan 2020)
 * We have one paper  accepted by CVPR 2019! (Feb 2019)
-* <span style="color:red">We receive the Best Student Paper Award / Best Paper Finalist at ICVS 2017!</span> (Jul 2017)
-* We have one paper accepted by ICVS 2017! (May 2017)
+* <span style="color:red">We have one paper accepted by ICVS 2017 and receive the Best Student Paper Award!</span> (Jul 2017)
 
 # Academic Services
 * Conference Reviewer: ICRA 2020/2021, CVPR 2021/2022, ICCV 2021, ECCV 2022, IROS 2022.
