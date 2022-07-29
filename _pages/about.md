@@ -19,7 +19,6 @@ redirect_from:
 * <span style="color:red">I joined XR Vision Labs of Tencent as a Research Engineer. </span> (Aug. 2022)
 * We have one paper  accepted by Sensors 2022! (Jul. 2022) 
 * We have two papers accepted by ICRA 2022! (Feb. 2022)
-* <span style="color:red">I joined Motovis Intelligent Technologies as a SLAM Technical Consultant. </span>(Nov. 2021) 
 * We have one paper  accepted by IROS 2021! (Jun. 2021) 
 * <span style="color:red">I joined SIMIT(Chinese Academy of Sciences) as a Post-Doc researcher. </span> (Apr. 2021)
 * We have one paper  accepted by ICRA 2021! (Feb. 2021) 
