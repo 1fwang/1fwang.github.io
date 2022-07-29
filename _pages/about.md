@@ -21,7 +21,7 @@ redirect_from:
 * We have two papers accepted by ICRA 2022! (Feb. 2022)
 * <span style="color:red">I joined Motovis Intelligent Technologies as a SLAM Technical Consultant. </span>(Nov. 2021) 
 * We have one paper  accepted by IROS 2021! (Jun. 2021) 
-* <span style="color:red">I joined Shanghai Institute of Microsystem and Information Technology, CAS as a Post-Doc researcher. </span> (Apr. 2021)
+* <span style="color:red">I joined Shanghai Institute of Microsystem and Information Technology(CAS) as a Post-Doc researcher. </span> (Apr. 2021)
 * We have one paper  accepted by ICRA 2021! (Feb. 2021) 
 * We have one paper  accepted by T-PAMI! (Jan 2021) 
 * We have one paper  accepted by ECCV 2020! (Jun. 2020)
