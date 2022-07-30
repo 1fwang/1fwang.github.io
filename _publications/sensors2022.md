@@ -13,8 +13,8 @@ youtubeId:
 #   teaser: arxiv2021_t.jpg
 ---
 
-<a href="https://1fwang.github.io/files/arxiv2021.pdf" target="_blank"><b>[PDF]</b></a>&emsp;
-<a href="https://1fwang.github.io/files/wang2021visual.txt" target="_blank"><b>[BibTex]</b></a>
+<a href="https://1fwang.github.io/files/sensors2022.pdf" target="_blank"><b>[PDF]</b></a>&emsp;
+<a href="https://1fwang.github.io/files/wang2022visual.txt" target="_blank"><b>[BibTex]</b></a>
 
 ![firenet_banner](/images/arxiv2021.jpg){:class="img-responsive"}
 
