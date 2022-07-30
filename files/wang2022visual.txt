@@ -1,0 +1,11 @@
+@article{wang2022visual,
+  title = {Visual Odometry with an Event Camera Using Continuous Ray Warping and Volumetric Contrast Maximization},
+  author = {Wang, Yifu and Yang, Jiaqi and Peng, Xin and Wu, Peng and Gao, Ling and Huang, Kun and Chen, Jiaben and Kneip, Laurent},
+  journal = {Sensors},
+  volume = {22},
+  year = {2022},
+  number = {15},
+  url = {https://www.mdpi.com/1424-8220/22/15/5687},
+  issn = {1424-8220},
+  doi = {10.3390/s22155687}
+}
