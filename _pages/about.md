@@ -17,7 +17,7 @@ redirect_from:
 
 
 # Recent News
-* <span style="color:red">I joined XR Vision Labs of Tencent as a Research Engineer. </span> (Aug. 2022)
+* <span style="color:red">I joined XR Vision Labs of Tencent as a Senior Researcher. </span> (Aug. 2022)
 * We have one paper  accepted by Sensors 2022! (Jul. 2022) 
 * We have two papers accepted by ICRA 2022! (Feb. 2022)
 * We have one paper  accepted by IROS 2021! (Jun. 2021) 
