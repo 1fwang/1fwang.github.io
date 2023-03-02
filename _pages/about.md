@@ -30,8 +30,9 @@ redirect_from:
 * <span style="color:red">We receive the Best Student Paper Award at ICVS 2017!</span> (Jul. 2017)
 
 # Academic Services
-* Conference Reviewer: ICRA 2020/2021, CVPR 2021/2022, ICCV 2021, ECCV 2022, IROS 2022.
+* Conference Reviewer: ICRA, CVPR, ICCV, ECCV, IROS.
 
+# 
 <a href="https://info.flagcounter.com/IDql"><img src="https://s01.flagcounter.com/map/IDql/size_s/txt_000000/border_CCCCCC/pageviews_1/viewers_0/flags_0/" alt="Flag Counter" border="0"></a>
 
 <a href="https://info.flagcounter.com/7dPb"><img src="https://s01.flagcounter.com/count2/7dPb/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
