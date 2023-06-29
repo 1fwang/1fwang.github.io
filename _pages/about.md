@@ -17,21 +17,23 @@ redirect_from:
 
 
 # Recent News
+* We have one paper accepted by IROS 2023. (Jun. 2023) 
 * <span style="color:red">Our team "XR Penguin" won the 1st place in both Vision Single and Multi Session Categories of [Hilti SLAM challenge 2023](https://hilti-challenge.com/leader-board-2023.html)! </span> (Jun. 2023)
 * <span style="color:red">I joined XR Vision Labs of Tencent as a Senior Researcher. </span> (Aug. 2022)
-* We have one paper  accepted by Sensors 2022! (Jul. 2022) 
-* We have two papers accepted by ICRA 2022! (Feb. 2022)
-* We have one paper  accepted by IROS 2021! (Jun. 2021) 
+* We have one paper accepted by Sensors 2022. (Jul. 2022) 
+* We have two papers accepted by ICRA 2022. (Feb. 2022)
+* We have one paper accepted by IROS 2021. (Jun. 2021) 
 * <span style="color:red">I joined SIMIT(Chinese Academy of Sciences) as a Post-Doc researcher. </span> (Apr. 2021)
-* We have one paper  accepted by ICRA 2021! (Feb. 2021) 
-* We have one paper  accepted by T-PAMI! (Jan 2021) 
-* We have one paper  accepted by ECCV 2020! (Jun. 2020)
-* We have one paper  accepted by ICRA 2020! (Jan. 2020)
-* We have one paper  accepted by CVPR 2019! (Feb. 2019)
-* <span style="color:red">We receive the Best Student Paper Award at ICVS 2017!</span> (Jul. 2017)
+* We have one paper accepted by ICRA 2021. (Feb. 2021) 
+* We have one paper accepted by T-PAMI. (Jan 2021) 
+* We have one paper accepted by ECCV 2020. (Jun. 2020)
+* We have one paper accepted by ICRA 2020. (Jan. 2020)
+* We have one paper accepted by CVPR 2019. (Feb. 2019)
+* <span style="color:red">We receive the Best Student Paper Award at ICVS 2017.</span> (Jul. 2017)
 
 # Academic Services
 * Conference Reviewer: ICRA, CVPR, ICCV, ECCV, IROS.
+* Journal Reviewer: TPAMI.
 
 
 
