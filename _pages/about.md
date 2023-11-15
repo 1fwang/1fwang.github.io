@@ -33,7 +33,7 @@ redirect_from:
 
 # Academic Services
 * Conference Reviewer: ICRA, CVPR, ICCV, ECCV, IROS.
-* Journal Reviewer: RA-L, TPAMI. 
+* Journal Reviewer: IJRR, TPAMI, RA-L. 
 
 
 
