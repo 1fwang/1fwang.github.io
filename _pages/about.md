@@ -17,7 +17,7 @@ redirect_from:
 
 
 # Recent News
-* We have one paper accepted by TRO. (Dec. 2023)
+* We have one paper accepted by [TRO](https://www.researchgate.net/publication/377413186_Cross-Modal_Semi-Dense_6-DoF_Tracking_of_an_Event_Camera_in_Challenging_Conditions). (Dec. 2023)
 * We have one paper accepted by [IROS 2023](https://jiabenchen.github.io/revisit_event). (Jun. 2023) 
 * <span style="color:red">Our team "XR Penguin" won the 1st place in both Vision Single and Multi Session Categories of [Hilti SLAM challenge 2023](https://hilti-challenge.com/leader-board-2023.html)! </span> (Jun. 2023)
 * <span style="color:red">I joined XR Vision Labs of Tencent as a Senior Researcher. </span> (Aug. 2022)
