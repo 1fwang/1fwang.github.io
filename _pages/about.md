@@ -17,7 +17,7 @@ redirect_from:
 
 
 # Recent News
-* We have one paper accepted by [ICRA 2024](https://arxiv.org/abs/2309.08142). [code](https://github.com/1fwang/ORB_SLAM3_MULTI)(Jan. 2024)
+* We have one paper accepted by [ICRA 2024](https://arxiv.org/abs/2309.08142). [Code Available](https://github.com/1fwang/ORB_SLAM3_MULTI)(Jan. 2024)
 * We have one paper accepted by [TRO](https://www.researchgate.net/publication/377413186_Cross-Modal_Semi-Dense_6-DoF_Tracking_of_an_Event_Camera_in_Challenging_Conditions). (Dec. 2023)
 * We have one paper accepted by [IROS 2023](https://jiabenchen.github.io/revisit_event). (Jun. 2023) 
 * <span style="color:red">Our team "XR Penguin" won the 1st place in both Vision Single and Multi Session Categories of [Hilti SLAM challenge 2023](https://hilti-challenge.com/leader-board-2023.html)! </span> (Jun. 2023)
