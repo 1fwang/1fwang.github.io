@@ -17,7 +17,7 @@ redirect_from:
 
 
 # Recent News
-* We have released our latest research project in Tencent: Sketch2Scene. (Aug. 2024) \[[Project Page](https://xrvisionlabs.github.io/Sketch2Scene/)\]
+* We have released our latest research project: Sketch2Scene. (Aug. 2024) \[[Project Page](https://xrvisionlabs.github.io/Sketch2Scene/)\]
 * We have one paper accepted by [ICRA 2024](https://arxiv.org/abs/2309.08142). (Jan. 2024) \[[Code Available](https://github.com/1fwang/ORB_SLAM3_MULTI)\]
 * We have one paper accepted by [TRO](https://www.researchgate.net/publication/377413186_Cross-Modal_Semi-Dense_6-DoF_Tracking_of_an_Event_Camera_in_Challenging_Conditions). (Dec. 2023)
 * We have one paper accepted by [IROS 2023](https://jiabenchen.github.io/revisit_event). (Jun. 2023) 
