@@ -17,6 +17,7 @@ redirect_from:
 
 
 # Recent News
+* We have released our latest research project: OpenGV 2.0. (Mar. 2025) \[[Available](https://arxiv.org/abs/2503.03230)\]
 * We have released our latest research project: Triplet-Tuning. (Jan. 2025) \[[Code Available](https://github.com/Tencent/Triplet_Tuning)\]
 * We have released our latest research project: Sketch2Scene. (Aug. 2024) \[[Project Page](https://xrvisionlabs.github.io/Sketch2Scene/)\]
 * We have one paper accepted by [ICRA 2024](https://arxiv.org/abs/2309.08142). (Jan. 2024) \[[Code Available](https://github.com/1fwang/ORB_SLAM3_MULTI)\]
