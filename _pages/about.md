@@ -17,6 +17,8 @@ redirect_from:
 
 
 # Recent News
+* We have one paper accepted by [RA-L 2025](https://ieeexplore.ieee.org/document/11214345). (Oct. 2025)
+* We have organized workshop on Event-Based Vision for Advanced State Estimation and Image Processing at [IROS 2025](https://eventvision-robotics.github.io/iros_workshop/). (Oct. 2025)  
 * We have released our latest research project: OpenGV 2.0. (Mar. 2025) \[[Available](https://arxiv.org/abs/2503.03230)\]
 * We have released our latest research project: Triplet-Tuning. (Jan. 2025) \[[Code Available](https://github.com/Tencent/Triplet_Tuning)\]
 * We have released our latest research project: Sketch2Scene. (Aug. 2024) \[[Project Page](https://xrvisionlabs.github.io/Sketch2Scene/)\]
