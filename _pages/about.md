@@ -17,6 +17,7 @@ redirect_from:
 
 
 # Recent News
+* We have launched [v2fun.ai](https://v2fun.ai), a unified AI 3D platform integrating image generation, 3D modeling, and animation into a single workflow. (Feb. 2026)
 * We have one paper accepted by [RA-L 2025](https://ieeexplore.ieee.org/document/11214345). (Oct. 2025)
 * We have organized workshop on Event-Based Vision for Advanced State Estimation and Image Processing at [IROS 2025](https://eventvision-robotics.github.io/iros_workshop/). (Oct. 2025)  
 * We have released our latest research project: OpenGV 2.0. (Mar. 2025) \[[Available](https://arxiv.org/abs/2503.03230)\]
