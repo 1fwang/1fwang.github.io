@@ -7,7 +7,7 @@
     "venue": "ECCV 2026, 130–147",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:_UHVf4SUL-oC",
     "paperurl": "https://link.springer.com/chapter/10.1007/978-3-032-37592-6_8",
-    "summary": "A 3D storyboard generation framework designed for consistency between shots and explicit editing, with semantic-spatial grounding and persistent scene assets.",
+    "summary": "StoryBlender turns a story into editable 3D storyboards while keeping characters, assets and spatial relationships consistent across shots. A persistent scene representation connects narrative planning with engine-verified scene construction.",
     "project": "https://engineeringai-lab.github.io/StoryBlender/",
     "pdf": "https://arxiv.org/pdf/2604.03315",
     "bib": "",
@@ -31,8 +31,8 @@
     "venue": "NeurIPS 2026",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:Pwyvq40bNxgC",
     "paperurl": "https://arxiv.org/abs/2605.30855",
-    "summary": "Uses latent Gaussian memory and deviation-aware training to improve long-term visual fidelity and 3D consistency in action-controlled autoregressive video generation.",
-    "project": "",
+    "summary": "Robust Dreamer improves long autoregressive video rollouts with action control by storing diffusion latents in a 3D Gaussian memory and training the generator to handle errors in its own historical memory.",
+    "project": "https://hlinchen.github.io/projects/Robust_Dreamer/",
     "pdf": "https://arxiv.org/pdf/2605.30855",
     "bib": "",
     "image": "/images/research/robust-dreamer2026.webp",
@@ -56,7 +56,7 @@
     "venue": "arXiv:2603.23413 · Preprint",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:rCBNAsRIPaEC",
     "paperurl": "https://arxiv.org/abs/2603.23413",
-    "summary": "Retrieves and injects implicit 3D-aware memories to preserve scene consistency when generated videos revisit previous views, without explicit 3D reconstruction.",
+    "summary": "I3DM preserves scene consistency in generated video by retrieving useful historical views and injecting spatially aligned memory features, without requiring an explicit 3D reconstruction of the scene.",
     "project": "",
     "pdf": "https://arxiv.org/pdf/2603.23413",
     "bib": "",
@@ -80,7 +80,7 @@
     "venue": "arXiv:2602.10516 · Preprint",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:mh_kRhzdDncC",
     "paperurl": "https://arxiv.org/abs/2602.10516",
-    "summary": "Unifies identity modeling, audio-driven lip synchronization, emotional expression and controllable head-pose motion for expressive 3D talking avatars.",
+    "summary": "3DXTalker combines identity, audio-driven lip motion, emotion and head-pose control in expressive 3D talking avatars. Its representation separates these factors so that speech animation and semantic control can work together.",
     "project": "",
     "pdf": "https://arxiv.org/pdf/2602.10516",
     "bib": "",
@@ -104,9 +104,9 @@
     "venue": "Transactions on Machine Learning Research",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:c17-Q8by-q4C",
     "paperurl": "https://arxiv.org/abs/2412.13486",
-    "summary": "A training-free sketch-to-scene approach using prompt balancing, characteristic prioritization and dense tuning to improve multi-instance concept art and terrain layouts.",
+    "summary": "T³-S2S turns sketches into controllable multi-object scene concept art through training-free interventions in diffusion attention and sketch conditioning. It also supports paired isometric and terrain-oriented views.",
     "project": "https://github.com/Tencent/Triplet_Tuning",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2412.13486",
     "bib": "",
     "image": "/images/research/triplet-tuning2026.webp",
     "abstract": "",
@@ -128,7 +128,7 @@
     "venue": "arXiv:2510.21696 · Preprint",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:UtEXi1y8reIC",
     "paperurl": "https://arxiv.org/abs/2510.21696",
-    "summary": "A training-free video generation approach that reuses intermediate features from an identity video to maintain both character and background consistency.",
+    "summary": "BachVid generates multiple video clips with consistent backgrounds and characters using a training-free reuse mechanism. It carries identity-related evidence from an initial video into later clips while allowing actions to change.",
     "project": "https://wolfball.github.io/bachvid",
     "pdf": "https://arxiv.org/pdf/2510.21696",
     "bib": "",
@@ -152,7 +152,7 @@
     "venue": "IEEE Robotics and Automation Letters",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:bhiEdXNsF9kC",
     "paperurl": "https://ieeexplore.ieee.org/abstract/document/11214345/",
-    "summary": "Adapts geometric foundation models to colonoscopy using self-supervised fine-tuning, detail restoration and geometry consistency.",
+    "summary": "ColonAdapter adapts a visual geometry foundation model to colonoscopy, using self-supervised geometric and photometric constraints to estimate depth, camera pose and dense 3D structure.",
     "project": "",
     "pdf": "https://arxiv.org/pdf/2511.22250",
     "bib": "",
@@ -176,7 +176,7 @@
     "venue": "arXiv:2503.03230 · Preprint",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:WDpX-WJWpcgC",
     "paperurl": "https://arxiv.org/abs/2503.03230",
-    "summary": "Uses vehicle motion priors for surround-view camera calibration, front-end motion initialization and continuous-time SLAM optimization.",
+    "summary": "OpenGV 2.0 uses vehicle motion priors to improve surround-view camera calibration, relative pose estimation and SLAM, including configurations with little overlap between cameras.",
     "project": "",
     "pdf": "https://arxiv.org/pdf/2503.03230",
     "bib": "",
@@ -200,9 +200,9 @@
     "venue": "arXiv:2408.04567 · Preprint",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:apQNQdK2TX4C",
     "paperurl": "https://arxiv.org/abs/2408.04567",
-    "summary": "Transforms casual sketches into interactive 3D game scenes through diffusion-based concept images, scene understanding and procedural content generation.",
+    "summary": "Sketch2Scene converts casual sketches into interactive 3D game scenes by combining diffusion-based concept generation, scene interpretation and procedural construction in a game engine.",
     "project": "https://xrvisionlabs.github.io/Sketch2Scene/",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2408.04567",
     "bib": "",
     "image": "/images/research/sketch2scene2024.webp",
     "abstract": "",
@@ -224,7 +224,7 @@
     "venue": "ICRA 2024",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:Uz_LZMUlNfwC",
     "paperurl": "https://arxiv.org/abs/2309.08142",
-    "summary": "Multi-camera visual-inertial SLAM with exact IMU pre-integration, designed to improve tracking under fast rotations and challenging motion.",
+    "summary": "MAVIS combines multiple cameras with an IMU for visual-inertial SLAM. Its exact SE₂(3)-based IMU pre-integration strengthens motion estimation during fast rotations and longer integration intervals.",
     "project": "https://github.com/MAVIS-SLAM/OpenMAVIS",
     "pdf": "https://arxiv.org/pdf/2309.08142",
     "bib": "",
@@ -247,10 +247,10 @@
     "date": "2024-01-17",
     "venue": "IEEE Transactions on Robotics, 40, 1600–1616",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:VJO2pBXxkIEC",
-    "paperurl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:VJO2pBXxkIEC",
-    "summary": "Event-based tracking through geometric registration of semidense maps and events, using another sensor for mapping to support localization under difficult visual conditions.",
+    "paperurl": "https://arxiv.org/abs/2401.08043",
+    "summary": "This work tracks an event camera in six degrees of freedom against a map built using another sensing modality, combining semidense geometric alignment with polarity-aware event representations.",
     "project": "",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2401.08043",
     "bib": "",
     "image": "/images/research/cross-modal-tracking2024.webp",
     "abstract": "",
@@ -271,10 +271,10 @@
     "date": "2023-10-01",
     "venue": "IROS 2023",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:kxqPq1lrxg0C",
-    "paperurl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:kxqPq1lrxg0C",
-    "summary": "Combines RGB information with event-guided optical flow refinement and incremental intermediate-frame synthesis for video frame interpolation.",
+    "paperurl": "https://arxiv.org/abs/2307.12558",
+    "summary": "This paper combines RGB-guided motion estimation with event-based refinement for video frame interpolation, using incremental intermediate-frame synthesis to handle larger temporal gaps.",
     "project": "https://jiabenchen.github.io/revisit_event",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2307.12558",
     "bib": "",
     "image": "/images/research/revisit-event2023.webp",
     "abstract": "",
@@ -296,7 +296,7 @@
     "venue": "arXiv:2307.01047 · Preprint",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:DmlyL2qDn2oC",
     "paperurl": "https://arxiv.org/abs/2307.01047",
-    "summary": "Retrieves conventional images from a database using event-camera queries, connecting event-based perception with image-based place recognition.",
+    "summary": "This work recognizes places from event-camera observations by retrieving matches in a conventional image database, connecting event sensing with existing visual reference maps.",
     "project": "",
     "pdf": "https://arxiv.org/pdf/2307.01047",
     "bib": "",
@@ -320,7 +320,7 @@
     "venue": "Technical report · Hilti SLAM Challenge 2023",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:N8i3go2yewMC",
     "paperurl": "https://hilti-challenge.com/assets/2023/leaderboard_multi_vision/1/report.pdf",
-    "summary": "Describes the XR Penguin team’s multi-camera visual-inertial SLAM entry, combining sliding-window bundle adjustment, loop closure and full visual-inertial optimization.",
+    "summary": "TXR-SLAM is the XR Penguin team's vision/IMU-only entry to the Hilti SLAM Challenge 2023, combining multi-camera tracking, sliding-window optimization, loop closure and full trajectory refinement.",
     "project": "",
     "pdf": "https://hilti-challenge.com/assets/2023/leaderboard_multi_vision/1/report.pdf",
     "bib": "",
@@ -352,7 +352,8 @@
     "pdf": "/files/sensors2022.pdf",
     "bib": "/files/wang2022visual.txt",
     "abstract": "We present a new solution to tracking and mapping with an event camera. The motion of the camera contains both rotation and translation, and the displacements happen in an arbitrarily structured environment. As a result, the image matching may no longer be represented by a low-dimensional homographic warping, thus complicating an application of the commonly used Image of Warped Events (IWE). We introduce a new solution to this problem by performing contrast maximization in 3D. The 3D location of the rays cast for each event is smoothly varied as a function of a continuous-time motion parametrization, and the optimal parameters are found by maximizing the contrast in a volumetric ray density field. Our method thus performs joint optimization over motion and structure. The practical validity of our approach is supported by an application to AGV motion estimation and 3D reconstruction with a single vehicle-mounted event camera. The method approaches the performance obtained with regular cameras, and eventually outperforms in challenging visual conditions.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:fmblvXrkuG0C"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:fmblvXrkuG0C",
+    "summary": "This event-camera visual odometry method jointly estimates motion and scene structure by warping viewing rays continuously and maximizing their concentration in a 3D volume."
   },
   {
     "title": "Accurate calibration of multi-perspective cameras from a generalization of the hand-eye constraint",
@@ -370,7 +371,8 @@
     "pdf": "/files/icra2022a.pdf",
     "bib": "/files/wang2022accurate.txt",
     "abstract": "Multi-perspective cameras are quickly gaining importance in many applications such as smart vehicles and virtual or augmented reality. However, a large system size or absence of overlap in neighbouring fields-of-view often complicate their calibration. We present a novel solution which relies on the availability of an external motion capture system. Our core contribution consists of an extension to the hand-eye calibration problem which jointly solves multi-eye-to-base problems in closed form. We furthermore demonstrate its equivalence to the multi-eye-in-hand problem. The practical validity of our approach is supported by our experiments, indicating that the method is highly efficient and accurate, and outperforms existing closed-form alternatives.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:hRQIxSsVotsC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:hRQIxSsVotsC",
+    "summary": "This paper generalizes the hand–eye calibration constraint to multi-perspective camera systems, providing a closed-form route to calibrating camera rigs against an externally tracked reference."
   },
   {
     "title": "DEVO: Depth-Event Camera Visual Odometry in Challenging Conditions",
@@ -388,7 +390,8 @@
     "pdf": "/files/icra2022b.pdf",
     "bib": "/files/zuo2022devo.txt",
     "abstract": "We present a novel real-time visual odometry framework for a stereo setup of a depth and high-resolution event camera. Our framework balances accuracy and robustness against computational efficiency towards strong performance in challenging scenarios. We extend conventional edge-based semi-dense visual odometry towards time-surface maps obtained from event streams. Semi-dense depth maps are generated by warping the corresponding depth values of the extrinsically calibrated depth camera. The tracking module updates the camera pose through efficient, geometric semi-dense 3D-2D edge alignment. Our approach is validated on both public and self-collected datasets captured under various conditions. We show that the proposed method performs comparable to state-of-the-art RGB-D camera-based alternatives in regular conditions, and eventually outperforms in challenging conditions such as high dynamics or low illumination.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:GoN68ttBjpsC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:GoN68ttBjpsC",
+    "summary": "DEVO combines a depth camera with an event camera for visual odometry, aligning semidense geometry with event-derived time surfaces to track motion in challenging lighting and fast movement."
   },
   {
     "title": "Dynamic Event Camera Calibration",
@@ -406,7 +409,8 @@
     "pdf": "/files/iros2021.pdf",
     "bib": "/files/huang2021dynamic.txt",
     "abstract": "Camera calibration is an important prerequisite towards the solution of 3D computer vision problems. Traditional methods rely on static images of a calibration pattern. This raises interesting challenges towards the practical usage of event cameras, which notably require image change to produce sufficient measurements. The current standard for event camera calibration therefore consists of using flashing patterns. They have the advantage of simultaneously triggering events in all reprojected pattern feature locations, but it is difficult to construct or use such patterns in the field. We present the first dynamic event camera calibration algorithm. It calibrates directly from events captured during relative motion between camera and calibration pattern. The method is propelled by a novel feature extraction mechanism for calibration patterns, and leverages existing calibration tools before optimizing all parameters through a multi-segment continuous-time formulation. As demonstrated through our results on real data, the obtained calibration method is highly convenient and reliably calibrates from data sequences spanning less than 10 seconds.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:CPO8fiJRLJUC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:CPO8fiJRLJUC",
+    "summary": "Dynamic Event Camera Calibration uses motion between an event camera and a conventional calibration pattern to estimate camera parameters, followed by continuous-time refinement."
   },
   {
     "title": "B-splines for Purely Vision-based Localization and Mapping on Non-holonomic Ground Vehicles",
@@ -424,7 +428,8 @@
     "pdf": "/files/icra2021.pdf",
     "bib": "/files/huang2021b.txt",
     "abstract": "Purely vision-based localization and mapping is a cost-effective and thus attractive solution to localization and mapping on smart ground vehicles. However, the accuracy and especially robustness of vision-only solutions remain rivalled by more expensive, lidar-based multi-sensor alternatives. We show that a significant increase in robustness can be achieved if taking non-holonomic kinematic constraints on the vehicle motion into account. Rather than using approximate planar motion models or simple, pair-wise regularization terms, we demonstrate the use of B-splines for an exact imposition of smooth, non-holonomic trajectories inside the 6 DoF bundle adjustment. We introduce both hard and soft formulations and compare their computational efficiency and accuracy against traditional solutions. Through results on both simulated and real data, we demonstrate a significant improvement in robustness and accuracy in degrading visual conditions.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:KWOT5kx9LqEC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:KWOT5kx9LqEC",
+    "summary": "This paper uses B-splines to incorporate smooth, non-holonomic vehicle motion into visual localization and mapping, refining trajectories within six-degree-of-freedom bundle adjustment."
   },
   {
     "title": "Globally-Optimal Contrast Maximisation for Event Cameras",
@@ -442,7 +447,8 @@
     "pdf": "/files/tpami2021.pdf",
     "bib": "/files/peng2021globally.txt",
     "abstract": "Event cameras are bio-inspired sensors that perform well in challenging illumination conditions and have high temporal resolution. However, their concept is fundamentally different from traditional frame-based cameras. The pixels of an event camera operate independently and asynchronously. They measure changes of the logarithmic brightness and return them in the highly discretised form of time-stamped events indicating a relative change of a certain quantity since the last event. New models and algorithms are needed to process this kind of measurements. The present work looks at several motion estimation problems with event cameras. The flow of the events is modelled by a general homographic warping in a space-time volume, and the objective is formulated as a maximisation of contrast within the image of warped events. Our core contribution consists of deriving globally optimal solutions to these generally non-convex problems, which removes the dependency on a good initial guess plaguing existing methods. Our methods rely on branch-and-bound optimisation and employ novel and efficient, recursive upper and lower bounds derived for six different contrast estimation functions. The practical validity of our approach is demonstrated by a successful application to three different event camera motion estimation problems.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:4zvtHfcxZacC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:4zvtHfcxZacC",
+    "summary": "This paper develops globally optimal contrast maximization for event-camera motion models, using branch-and-bound search with recursive bounds to avoid dependence on a favorable initial guess."
   },
   {
     "slug": "doctoral-thesis2021",
@@ -451,8 +457,8 @@
     "date": "2021",
     "venue": "Doctoral thesis · Australian National University · PQDT-Global",
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:PkcMUVwzxggC",
-    "paperurl": "https://search.proquest.com/openview/8016b36bc6548fa23ea205cc4bc4faaa/1?pq-origsite=gscholar&cbl=2026366&diss=y",
-    "summary": "Investigates visual localization and mapping with surround-view multi-camera systems and event cameras for intelligent mobile platforms.",
+    "paperurl": "https://openresearch-repository.anu.edu.au/items/87e4d94b-b5bc-4267-9630-db1c2cd99916",
+    "summary": "This PhD thesis studies localization and mapping with surround-view multi-camera systems and event cameras, linking sensor geometry, vehicle motion constraints and continuous-time estimation.",
     "project": "",
     "pdf": "https://openresearch-repository.anu.edu.au/bitstreams/a2b5b54c-c69b-41c8-83f5-9bc715a03fac/download",
     "bib": "",
@@ -478,7 +484,8 @@
     "pdf": "/files/eccv2020.pdf",
     "bib": "/files/peng2020globally.txt",
     "abstract": "Event cameras are bio-inspired sensors that perform well in HDR conditions and have high temporal resolution. However, different from traditional frame-based cameras, event cameras measure asynchronous pixel-level brightness changes and return them in a highly discretised format, hence new algorithms are needed. The present paper looks at fronto-parallel motion estimation of an event camera. The flow of the events is modeled by a general homographic warping in a space-time volume, and the objective is formulated as a maximisation of contrast within the image of unwarped events. However, in stark contrast to prior art, we derive a globally optimal solution to this generally non-convex problem, and thus remove the dependency on a good initial guess. Our algorithm relies on branch-and-bound optimisation for which we derive novel, recursive upper and lower bounds for six different contrast estimation functions. The practical validity of our approach is supported by a highly successful application to AGV motion estimation with a downward facing event camera, a challenging scenario in which the sensor experiences fronto-parallel motion in front of noisy, fast moving textures.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:ivZkoQ3BXGwC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:ivZkoQ3BXGwC",
+    "summary": "This work derives a globally optimal contrast-maximization solution for event-camera motion estimation, focusing on the fronto-parallel geometry of a downward-looking ground-vehicle camera."
   },
   {
     "title": "Reliable frame-to-frame motion estimation for vehicle-mounted surround-view camera systems",
@@ -496,7 +503,8 @@
     "pdf": "/files/icra2020.pdf",
     "bib": "/files/wang2020reliable.txt",
     "abstract": "Modern vehicles are often equipped with a surround-view multi-camera system. The current interest in autonomous driving invites the investigation of how to use such systems for a reliable estimation of relative vehicle displacement. Existing camera pose algorithms either work for a single camera, make overly simplified assumptions, are computationally expensive, or simply become degenerate under non-holonomic vehicle motion. In this paper, we introduce a new, reliable solution able to handle all kinds of relative displacements in the plane despite the possibly non-holonomic characteristics. We furthermore introduce a novel two-view optimization scheme which minimizes a geometrically relevant error without relying on 3D point related optimization variables. Our method leads to highly reliable and accurate frame-to-frame visual odometry with a full-size, vehicle-mounted surround-view camera system.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:mypARBk_2iYC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:mypARBk_2iYC",
+    "summary": "This paper improves frame-to-frame motion estimation for vehicle-mounted surround-view cameras, addressing planar-motion degeneracies with a geometric two-view optimization."
   },
   {
     "title": "Motion estimation of non-holonomic ground vehicles from a single feature correspondence measured over n views",
@@ -514,7 +522,8 @@
     "pdf": "/files/cvpr2019.pdf",
     "bib": "/files/huang2019motion.txt",
     "abstract": "The planar motion of ground vehicles is often non-holonomic, which enables a solution of the two-view relative pose problem from a single point feature correspondence. Man-made environments such as underground parking lots are however dominated by line features. Inspired by the planar tri-focal tensor and its ability to handle lines, we establish an n-linear constraint on the locally circular motion of non-holonomic vehicles able to handle an arbitrarily large and dense window of views. We prove that this stays a uni-variate problem under the assumption of locally constant vehicle speed, and it can transparently handle both point and vertical line correspondences. In particular, we prove that an application of Viete's formulas for extrapolating trigonometric functions of angle multiples and the Weierstrass substitution casts the problem as one that merely seeks the roots of a uni-variate polynomial. We present the complete theory of this novel solver, and test it on both simulated and real data. Our results prove that it successfully handles a variety of relevant scenarios, eventually outperforming the 1-point two-view solver.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:rHMNuS5ZWegC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:rHMNuS5ZWegC",
+    "summary": "This paper estimates non-holonomic ground-vehicle motion from one tracked feature across multiple views, using a constrained motion model to derive a compact polynomial solution."
   },
   {
     "title": "On Scale Initialization in Non-overlapping Multi-perspective Visual Odometry",
@@ -532,6 +541,7 @@
     "pdf": "/files/icvs2017.pdf",
     "bib": "/files/wang2017scale.txt",
     "abstract": "Multi-perspective camera systems pointing into all directions represent an increasingly interesting solution for visual localization and mapping. They combine the benefits of omni-directional measurements with a sufficient baseline for producing measurements in metric scale. However, the observability of metric scale suffers from degenerate cases if the cameras do not share any overlap in their field of view. This problem is of particular importance in many relevant practical applications, and it impacts most heavily on the difficulty of bootstrapping the structure-from-motion process. The present paper introduces a complete real-time pipeline for visual odometry with non-overlapping, multi-perspective camera systems, and in particular presents a solution to the scale initialization problem. We evaluate our method on both simulated and real data, thus proving robust initialization capacity as well as best-in-class performance regarding the overall motion estimation accuracy.",
-    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:4LPW6KJJ5jkC"
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_0BWh_8AAAAJ&citation_for_view=_0BWh_8AAAAJ:4LPW6KJJ5jkC",
+    "summary": "This paper studies metric-scale initialization for visual odometry with non-overlapping multi-perspective cameras, including the motion degeneracies that can make scale unobservable."
   }
 ]

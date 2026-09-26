@@ -1,0 +1,664 @@
+{
+  "storyblender2026": {
+    "topic": "3D scenes & avatars",
+    "summary": "StoryBlender turns a story into editable 3D storyboards while keeping characters, assets and spatial relationships consistent across shots. A persistent scene representation connects narrative planning with engine-verified scene construction.",
+    "question": "How can AI storyboards stay consistent across camera cuts?",
+    "problem": "Generating each shot independently can change a character's appearance, move objects or break the geography of a scene. Storyboarding also needs editable cameras and staging, so visual similarity alone is insufficient. StoryBlender treats continuity as a shared scene-management problem.",
+    "method": [
+      "A continuity memory graph separates persistent assets from the variables that change between shots, giving the sequence a shared reference.",
+      "Canonical assets occupy a unified coordinate system. Spatial-temporal dynamics describe how cameras, objects and staging evolve through the story.",
+      "Hierarchical agents use a Story-centric Reflection loop with engine feedback to revise scene construction. The result is a native 3D storyboard with editable assets and cameras."
+    ],
+    "interpretation": "The contribution is a connection between narrative continuity and explicit, editable spatial state. For previsualization, this makes a camera change or staging revision a scene edit rather than a request to regenerate unrelated images. The paper's comparisons examine consistency and editability; they should be read alongside its qualitative examples.",
+    "scope": "Visual quality and style remain bounded by the underlying image-to-3D models and renderer. Repeated agent and engine checks add overhead. Bounding-box reasoning and retargeted motion primarily support broad staging, rather than detailed grasping, cloth interaction or facial animation.",
+    "faq": [
+      {
+        "q": "Does StoryBlender produce editable 3D scenes?",
+        "a": "Yes. Its output includes native 3D scene content and camera configurations, enabling changes to staging and viewpoints after generation."
+      },
+      {
+        "q": "How does it differ from generating separate storyboard images?",
+        "a": "It maintains persistent assets and spatial relationships across shots. Separate image generation does not, by itself, provide that shared editable scene state."
+      }
+    ],
+    "related": [
+      "sketch2scene2024",
+      "triplet-tuning2026",
+      "bachvid2025"
+    ],
+    "seoTitle": "StoryBlender: Consistent, Editable 3D Storyboards",
+    "description": "How StoryBlender builds consistent, editable 3D storyboards with shared scene memory. Research summary, method, limitations and original sources.",
+    "participation": "I contributed to StoryBlender as a co-author through an external research collaboration during my time at"
+  },
+  "robust-dreamer2026": {
+    "topic": "Video generation",
+    "summary": "Robust Dreamer improves long autoregressive video rollouts with action control by storing diffusion latents in a 3D Gaussian memory and training the generator to handle errors in its own historical memory.",
+    "question": "Why does action-controlled video drift over long rollouts?",
+    "problem": "A generator repeatedly conditions on its earlier predictions. Small mistakes can accumulate, while repeatedly decoding latent features into RGB images and encoding them again loses information. Training with clean memory also leaves a mismatch with the imperfect memory encountered during generation.",
+    "method": [
+      "Latent Gaussian Memory anchors diffusion latents to 3D Gaussian primitives and retrieves view-aligned features through latent-space splatting, avoiding repeated latent-to-RGB cycling.",
+      "Deviation Learning synthesizes rollout-like errors. A Dynamic Deviation Archive organizes these deviations by autoregressive stage and denoising timestamp.",
+      "Injecting archived deviations into training memory exposes the model to imperfect histories. Evaluation covers ScanNet, DL3DV and OmniWorldGame."
+    ],
+    "interpretation": "The key idea is to improve both the representation of history and the generator's ability to use imperfect history. This is relevant to interactive world simulation, where a plausible individual frame is not enough: revisiting a location should preserve the scene. The reported gains concern the paper's evaluated rollouts, rather than an unrestricted guarantee of physical consistency.",
+    "scope": "Memory quality depends on successful 3D reconstruction. Occlusion, reflective surfaces, rapid motion and limited viewpoints can still produce incomplete geometry. Memory construction and generation are separate modules, which limits joint optimization.",
+    "faq": [
+      {
+        "q": "What does AR mean in Robust Dreamer?",
+        "a": "AR means autoregressive: the model generates subsequent video content using earlier generated content and control signals."
+      },
+      {
+        "q": "Does Gaussian memory eliminate long-term drift?",
+        "a": "It is designed to reduce drift, together with deviation-aware training. Reconstruction failures and accumulated prediction errors remain limitations."
+      }
+    ],
+    "related": [
+      "i3dm2026",
+      "bachvid2025",
+      "storyblender2026"
+    ],
+    "company": true,
+    "seoTitle": "Robust Dreamer: Memory for Action-Controlled Video",
+    "description": "Explore Robust Dreamer: latent Gaussian memory and deviation-aware training for action-controlled video. NeurIPS 2026 paper summary and sources."
+  },
+  "i3dm2026": {
+    "topic": "Video generation",
+    "summary": "I3DM preserves scene consistency in generated video by retrieving useful historical views and injecting spatially aligned memory features, without requiring an explicit 3D reconstruction of the scene.",
+    "question": "How can a video generator remember a scene when the camera returns?",
+    "problem": "A camera can turn away from an object and later revisit it. Short temporal context may forget that object, while selecting history only by camera field of view can overlook occlusion and whether a frame actually contains useful evidence.",
+    "method": [
+      "Intermediate features from a feed-forward novel-view-synthesis model provide implicit 3D cues for scoring the relevance of historical views.",
+      "Selected memory features are warped toward the target view. Adaptive injection emphasizes spatially reliable regions instead of treating every historical pixel equally.",
+      "Retrieval and injection work together to condition video generation on remembered scene content without maintaining an explicit reconstructed 3D model."
+    ],
+    "interpretation": "This approach treats memory selection as a geometric relevance problem. A large archive helps only when the generator can find and align the right evidence. Compared with explicit geometric memory, implicit features offer another way to connect earlier observations to a new camera view.",
+    "scope": "Retrieval becomes more expensive as the memory bank grows. The paper also identifies a training–inference gap: generated history can be noisier than training history. Using earlier, cleaner frames helps but does not fully resolve that drift.",
+    "faq": [
+      {
+        "q": "Does I3DM require an explicit 3D scene model?",
+        "a": "No. It uses implicit 3D-aware features from novel-view synthesis for memory retrieval, warping and injection."
+      },
+      {
+        "q": "Why not retrieve frames only by camera overlap?",
+        "a": "Geometric overlap alone does not account for occlusion or the quality of the visual evidence. I3DM uses learned spatial features to assess which history is useful."
+      }
+    ],
+    "related": [
+      "robust-dreamer2026",
+      "bachvid2025",
+      "storyblender2026"
+    ],
+    "company": true,
+    "seoTitle": "I3DM: 3D-Aware Memory for Consistent Video",
+    "description": "How I3DM retrieves and aligns scene memory for consistent video generation without explicit 3D reconstruction. Summary, interpretation and paper."
+  },
+  "3dxtalker2026": {
+    "topic": "3D scenes & avatars",
+    "summary": "3DXTalker combines identity, audio-driven lip motion, emotion and head-pose control in expressive 3D talking avatars. Its representation separates these factors so that speech animation and semantic control can work together.",
+    "question": "How can a talking avatar preserve identity while changing expression and pose?",
+    "problem": "Matching mouth movement to speech is only part of an expressive avatar. Identity should remain stable while facial emotion and head motion change. Entangling those factors makes targeted control difficult and can reduce consistency.",
+    "method": [
+      "A scalable 2D-to-3D data-curation pipeline supplies facial animation parameters, with identity represented separately from time-varying motion.",
+      "A flow-matching transformer models motion using audio features that capture more than phonetic timing, including amplitude and emotional cues.",
+      "Decoupled semantic conditioning provides emotion and pose control alongside audio-driven lip synchronization."
+    ],
+    "interpretation": "The research brings several avatar controls into a common 3D animation framework. Its practical value is the possibility of changing delivery or head motion without rebuilding a person's identity representation. This is an animation contribution, rather than a claim that audio uniquely determines a speaker's true emotions.",
+    "scope": "The quality of 3D supervision is bounded by the upstream EMOCA reconstruction process. Filtering and smoothing can reduce some errors but cannot remove every reconstruction artifact. Dataset and language diversity also affect generalization to new expressions and speech.",
+    "faq": [
+      {
+        "q": "Is 3DXTalker only a lip-sync model?",
+        "a": "No. It jointly addresses identity, lip synchronization, emotion and spatial head dynamics in a 3D avatar representation."
+      },
+      {
+        "q": "Can emotion and head pose be controlled separately?",
+        "a": "The method includes decoupled semantic control for emotion and pose, alongside audio conditioning. The paper provides the experimental scope of those controls."
+      }
+    ],
+    "related": [
+      "storyblender2026",
+      "bachvid2025",
+      "triplet-tuning2026"
+    ],
+    "seoTitle": "3DXTalker: Expressive 3D Talking Avatars",
+    "description": "Learn how 3DXTalker combines identity, lip sync, emotion and head-pose control for 3D avatars. Research summary, limitations and original paper.",
+    "participation": "I contributed to 3DXTalker as a co-author through an external research collaboration during my time at"
+  },
+  "triplet-tuning2026": {
+    "topic": "3D scenes & avatars",
+    "summary": "T³-S2S turns sketches into controllable multi-object scene concept art through training-free interventions in diffusion attention and sketch conditioning. It also supports paired isometric and terrain-oriented views.",
+    "question": "How can sketch-to-image generation preserve several objects and their attributes?",
+    "problem": "A sketch may place multiple objects correctly while text describes their individual appearance. A diffusion model can still omit prompt details, confuse instances or weaken sketch structure. T³-S2S addresses these competing controls during generation.",
+    "method": [
+      "Prompt Balance adjusts cross-attention so important prompt terms are not overwhelmed by competing content.",
+      "Characteristic Priority selects influential sketch-conditioning feature channels. Dense Tuning connects instance contours with attention to strengthen local control.",
+      "A feature-sharing, dual-prompt design connects isometric concept images and terrain-oriented layers for scene-design workflows."
+    ],
+    "interpretation": "The three interventions target different failures: textual emphasis, structural guidance and instance-level detail. They offer a way to adapt a pretrained generation pipeline without task-specific weight training. The output is 2D scene concept art, which can inform a later 3D workflow; it is not itself a complete interactive game scene.",
+    "scope": "Fine texture and adjective-level attributes can remain ambiguous, especially for similar objects with different colors. Large, detailed maps also face resolution and computation tradeoffs. Training-free refers to the adaptation procedure; the underlying models are pretrained.",
+    "faq": [
+      {
+        "q": "Does T³-S2S require retraining a diffusion model?",
+        "a": "Its triplet-tuning procedure is training-free and operates on a pretrained model's generation process."
+      },
+      {
+        "q": "How is T³-S2S different from Sketch2Scene?",
+        "a": "T³-S2S focuses on controllable 2D scene concept art. Sketch2Scene adds structured scene interpretation and procedural construction to create interactive 3D environments."
+      }
+    ],
+    "related": [
+      "sketch2scene2024",
+      "storyblender2026",
+      "3dxtalker2026"
+    ],
+    "company": true,
+    "seoTitle": "T³-S2S: Training-Free Sketch-to-Scene Concept Art",
+    "description": "Explore T³-S2S triplet tuning for controllable sketch-to-scene concept art. Method explained, research context, TMLR record and code links."
+  },
+  "bachvid2025": {
+    "topic": "Video generation",
+    "summary": "BachVid generates multiple video clips with consistent backgrounds and characters using a training-free reuse mechanism. It carries identity-related evidence from an initial video into later clips while allowing actions to change.",
+    "question": "How can different generated clips share both a character and a background?",
+    "problem": "Repeating a text prompt does not guarantee that a video model will reproduce the same character or location. Keeping the character while changing the setting, or preserving the setting while changing the character, also breaks a continuous sequence.",
+    "method": [
+      "The pipeline first generates an identity video and records intermediate generation variables that describe its visual content.",
+      "Attention masks, matching points and selected influential layers identify where identity-related information should be reused.",
+      "Later generations inject this information at matched positions. Prompts preserve character and background descriptions while changing the action."
+    ],
+    "interpretation": "BachVid targets continuity across clips rather than only smooth motion inside one clip. Reusing selected internal evidence can make a sequence feel like it belongs to the same visual world without training a new identity-specific model. That is useful for studying repeatable characters and settings in generative storytelling.",
+    "scope": "The described method creates its own initial identity video; it does not support supplying arbitrary reference images for character or background identity. Training-free customization still requires pretrained models and generation computation.",
+    "faq": [
+      {
+        "q": "Does BachVid keep backgrounds as well as characters consistent?",
+        "a": "Yes. Joint background and character consistency across generated clips is the central goal."
+      },
+      {
+        "q": "Can I supply a reference portrait to establish identity?",
+        "a": "Reference-image identity input is outside the method described in the paper. It establishes identity through an initially generated video."
+      }
+    ],
+    "related": [
+      "storyblender2026",
+      "i3dm2026",
+      "robust-dreamer2026"
+    ],
+    "company": true,
+    "seoTitle": "BachVid: Consistent Characters & Backgrounds in Video",
+    "description": "How BachVid preserves characters and backgrounds across generated video clips without additional training. Summary, scope, paper and project."
+  },
+  "colonadapter2025": {
+    "topic": "Geometry & SLAM",
+    "summary": "ColonAdapter adapts a visual geometry foundation model to colonoscopy, using self-supervised geometric and photometric constraints to estimate depth, camera pose and dense 3D structure.",
+    "question": "Why does a general geometry model need adaptation for colonoscopy?",
+    "problem": "Colonoscopy images differ from ordinary photographs: surfaces have limited texture, illumination moves with the camera and specular reflections change with viewpoint. These properties create a domain gap for geometry models trained on natural scenes.",
+    "method": [
+      "The method adapts a DUSt3R-based geometry model with a self-supervised training design suited to colonoscopy imagery.",
+      "A DRM module, geometric consistency and confidence-weighted photometric losses guide adaptation while handling unreliable visual evidence."
+    ],
+    "interpretation": "The work studies whether pretrained geometric knowledge can transfer to a specialized imaging domain with suitable supervision. Synthetic and real-data experiments assess geometric estimation, including operation without ground-truth camera intrinsics.",
+    "scope": "The contribution concerns geometry estimation. Its experiments should not be interpreted as validation of disease diagnosis or of an autonomous clinical procedure. Performance remains tied to the imaging conditions and evaluation data in the paper.",
+    "faq": [
+      {
+        "q": "What does ColonAdapter estimate?",
+        "a": "It targets camera pose, depth and dense 3D geometry from colonoscopy imagery."
+      }
+    ],
+    "related": [
+      "icra2022a",
+      "icra2022b",
+      "cross-modal-tracking2024"
+    ],
+    "seoTitle": "ColonAdapter: Geometry Estimation for Colonoscopy",
+    "description": "ColonAdapter adapts a geometry foundation model to colonoscopy. Read a summary of its method, evaluation scope and original research sources."
+  },
+  "opengv2025": {
+    "topic": "Geometry & SLAM",
+    "summary": "OpenGV 2.0 uses vehicle motion priors to improve surround-view camera calibration, relative pose estimation and SLAM, including configurations with little overlap between cameras.",
+    "question": "How can vehicle motion help a surround-view SLAM system?",
+    "problem": "Cameras mounted around a vehicle observe different parts of the environment. Limited overlap and constrained vehicle motion can make calibration and motion estimation poorly observable. The method uses those motion constraints explicitly instead of ignoring them.",
+    "method": [
+      "Two-view geometry supports online extrinsic calibration and relative-pose initialization for the multi-camera rig.",
+      "A continuous-time spline backend incorporates non-holonomic motion priors to refine the trajectory and scene estimates."
+    ],
+    "interpretation": "The paper connects calibration, initialization and trajectory refinement around a common vehicle-motion model. Its evaluations and ablations examine how these priors help under the geometry of vehicle-mounted surround-view systems.",
+    "scope": "The benefits depend on how well the vehicle's actual motion matches the assumed constraints. The research record should be consulted for data and release details; a paper title alone does not establish software availability.",
+    "faq": [
+      {
+        "q": "Is OpenGV 2.0 designed only for overlapping stereo cameras?",
+        "a": "No. It addresses vehicle-mounted surround-view systems, where overlap between cameras may be limited."
+      }
+    ],
+    "related": [
+      "icra2020",
+      "icra2021",
+      "icvs2017"
+    ],
+    "seoTitle": "OpenGV 2.0: Surround-View Calibration & SLAM",
+    "description": "How OpenGV 2.0 uses vehicle motion priors for multi-camera calibration and SLAM. Research summary, method interpretation and original paper."
+  },
+  "sketch2scene2024": {
+    "topic": "3D scenes & avatars",
+    "summary": "Sketch2Scene converts casual sketches into interactive 3D game scenes by combining diffusion-based concept generation, scene interpretation and procedural construction in a game engine.",
+    "question": "How can a rough sketch become a structured 3D environment?",
+    "problem": "A generated image can suggest a landscape without defining editable objects, terrain or spatial relationships. An interactive scene needs these explicit components. Sketch2Scene connects image generation with a structured construction pipeline.",
+    "method": [
+      "A sketch-guided diffusion stage produces an isometric concept image, reducing ambiguity about the camera viewpoint.",
+      "Scene interpretation extracts layout and components such as terrain, trees and buildings from that image.",
+      "Procedural content generation assembles the interpreted elements into an interactive 3D engine scene."
+    ],
+    "interpretation": "The contribution is the bridge from a visual design suggestion to explicit scene structure. Combining pretrained image generation with procedural tools avoids requiring a single model to learn every aspect of end-to-end 3D scene construction.",
+    "scope": "The resulting scene follows the categories and construction rules supported by the pipeline. An interactive environment is not automatically a fully authored game with arbitrary mechanics, and errors in image interpretation can propagate into the scene.",
+    "faq": [
+      {
+        "q": "Does Sketch2Scene output only a concept image?",
+        "a": "No. The image is an intermediate representation used to build a structured, interactive 3D scene."
+      }
+    ],
+    "related": [
+      "triplet-tuning2026",
+      "storyblender2026",
+      "3dxtalker2026"
+    ],
+    "seoTitle": "Sketch2Scene: From Sketches to Interactive 3D Scenes",
+    "description": "How Sketch2Scene combines diffusion and procedural generation to turn sketches into interactive 3D scenes. Summary, interpretation and sources."
+  },
+  "mavis2024": {
+    "topic": "Geometry & SLAM",
+    "summary": "MAVIS combines multiple cameras with an IMU for visual-inertial SLAM. Its exact SE₂(3)-based IMU pre-integration strengthens motion estimation during fast rotations and longer integration intervals.",
+    "question": "What changes when visual-inertial SLAM uses more than two cameras?",
+    "problem": "A multi-camera rig sees more of its surroundings, but exploiting that coverage requires tracking and optimization across partially overlapping views. Inertial integration accuracy also matters when visual updates are separated by fast motion or longer intervals.",
+    "method": [
+      "An SE₂(3)-based formulation provides exact IMU pre-integration and associated uncertainty propagation under the method's model.",
+      "The front and back ends combine observations across cameras, with loop closure and multi-session mapping extending the system beyond local tracking."
+    ],
+    "interpretation": "MAVIS combines an inertial modeling contribution with a complete multi-camera SLAM system. Evaluations on EuRoC and Hilti data examine tracking and mapping performance; the linked implementation provides a practical starting point for understanding the system.",
+    "scope": "Exact pre-integration describes the mathematical formulation, not error-free sensors or trajectories. Calibration, synchronization, visual coverage and inertial measurement quality still affect the result.",
+    "faq": [
+      {
+        "q": "Is MAVIS a camera-only SLAM system?",
+        "a": "No. It fuses multi-camera observations with inertial measurements."
+      }
+    ],
+    "related": [
+      "txr-slam2023",
+      "opengv2025",
+      "icra2022a"
+    ],
+    "seoTitle": "MAVIS: Multi-Camera Visual-Inertial SLAM",
+    "description": "Explore MAVIS and its exact IMU pre-integration for multi-camera visual-inertial SLAM. ICRA 2024 research summary, original paper and code."
+  },
+  "cross-modal-tracking2024": {
+    "topic": "Event-based vision",
+    "summary": "This work tracks an event camera in six degrees of freedom against a map built using another sensing modality, combining semidense geometric alignment with polarity-aware event representations.",
+    "question": "Can an event camera localize against a map built from ordinary images?",
+    "problem": "Event cameras report brightness changes rather than conventional frames. A map built by a depth sensor or an image-based reconstruction pipeline therefore has a different appearance representation, even when it describes the same geometry.",
+    "method": [
+      "Semidense 3D map edges are aligned with a polarity-aware spatio-temporal event representation to estimate camera motion.",
+      "Occluded map points are culled so that geometry hidden in the current view does not distort the alignment."
+    ],
+    "interpretation": "Separating map creation from event-based tracking allows complementary sensors to contribute different strengths. The contribution is cross-modal 6-DoF localization against existing geometry, rather than requiring an event camera to reconstruct the entire map itself.",
+    "scope": "The tracker depends on a suitable prior map and meaningful visible edge structure. Large map changes, poor geometry or insufficient event evidence can undermine alignment.",
+    "faq": [
+      {
+        "q": "Does the event camera build the map in this method?",
+        "a": "The tracking method can use geometry supplied by another modality, such as depth sensing or image-based reconstruction."
+      }
+    ],
+    "related": [
+      "icra2022b",
+      "event-place-recognition2023",
+      "sensors2022"
+    ],
+    "seoTitle": "Cross-Modal 6-DoF Event Camera Tracking",
+    "description": "How event cameras track against maps from depth or conventional images. Read the semidense 6-DoF tracking summary, interpretation and paper."
+  },
+  "revisit-event2023": {
+    "topic": "Event-based vision",
+    "summary": "This paper combines RGB-guided motion estimation with event-based refinement for video frame interpolation, using incremental intermediate-frame synthesis to handle larger temporal gaps.",
+    "question": "How do event measurements help reconstruct frames between RGB images?",
+    "problem": "Conventional frames leave motion unobserved between exposures. Events provide precise timing of brightness changes, but do not directly contain full color images. The two modalities therefore supply complementary evidence for interpolation.",
+    "method": [
+      "RGB information guides the initial motion estimate, while events refine motion using their high temporal resolution.",
+      "An incremental, divide-and-conquer interpolation strategy constructs intermediate frames rather than solving every long interval in one step."
+    ],
+    "interpretation": "The study emphasizes how to combine the modalities, rather than assuming that adding events automatically improves interpolation. Synthetic and real-data evaluations examine the resulting image reconstruction.",
+    "scope": "This is interpolation between observed frames using sensor evidence. It is distinct from text-to-video generation or predicting an unseen future; input quality and the motion within the observed interval remain important.",
+    "faq": [
+      {
+        "q": "Can events replace RGB information entirely for this task?",
+        "a": "The described method uses both. Events contribute motion timing, while RGB frames supply appearance information."
+      }
+    ],
+    "related": [
+      "icra2022b",
+      "sensors2022",
+      "event-place-recognition2023"
+    ],
+    "seoTitle": "Revisiting Event-Based Video Frame Interpolation",
+    "description": "How RGB-guided flow and event refinement reconstruct intermediate video frames. IROS 2023 research summary, original paper and project links."
+  },
+  "event-place-recognition2023": {
+    "topic": "Event-based vision",
+    "summary": "This work recognizes places from event-camera observations by retrieving matches in a conventional image database, connecting event sensing with existing visual reference maps.",
+    "question": "Can an event-based query find a location in an RGB image database?",
+    "problem": "Many reference maps contain ordinary images, while a robot may use an event camera in challenging lighting. The mismatch between these representations makes direct appearance matching difficult.",
+    "method": [
+      "The method combines retrieval and classification objectives to connect event-derived observations with image-based place representations.",
+      "Experiments on Brisbane-Event-VPR study cross-modal place recognition under changing illumination."
+    ],
+    "interpretation": "Reusing an image database could reduce the need to remap every place with an event sensor. The output identifies a likely location or reference observation, which can support a later localization stage.",
+    "scope": "Place retrieval is not a continuous six-degree-of-freedom pose estimate. Performance depends on database coverage and the visual conditions represented during evaluation.",
+    "faq": [
+      {
+        "q": "Does this method estimate a full camera trajectory?",
+        "a": "Its focus is place recognition: matching an event query to an image database. Continuous geometric tracking is a separate task."
+      }
+    ],
+    "related": [
+      "cross-modal-tracking2024",
+      "icra2022b",
+      "revisit-event2023"
+    ],
+    "seoTitle": "Event-Based Place Recognition in Image Databases",
+    "description": "Explore cross-modal place recognition using event-camera queries and RGB reference images. Method explained, scope and original paper links."
+  },
+  "txr-slam2023": {
+    "topic": "Geometry & SLAM",
+    "summary": "TXR-SLAM is the XR Penguin team's vision/IMU-only entry to the Hilti SLAM Challenge 2023, combining multi-camera tracking, sliding-window optimization, loop closure and full trajectory refinement.",
+    "question": "What does a complete multi-camera challenge SLAM system require?",
+    "problem": "Real sequences include dark images, dropped measurements, imperfect synchronization and limited overlap between sessions. Reliable mapping therefore depends on calibration, preprocessing and map management as well as pose estimation.",
+    "method": [
+      "Visual observations from multiple cameras and pre-integrated IMU measurements enter sliding-window bundle adjustment.",
+      "Loop closure and automatic map merging connect revisited areas and multiple sessions. Full visual-inertial bundle adjustment refines the final result."
+    ],
+    "interpretation": "The report shows how system-level choices affect benchmark performance. It records difficult sequences and processing times, making it useful context for the multi-camera design subsequently described in MAVIS.",
+    "scope": "The reported final trajectory is non-causal because global refinement uses later observations. Some sessions cannot be merged when overlap is insufficient. The report uses cameras and IMU, without LiDAR measurements.",
+    "faq": [
+      {
+        "q": "Are the final TXR-SLAM results strictly online?",
+        "a": "No. The report explicitly describes non-causal final refinement using full bundle adjustment and loop closure."
+      }
+    ],
+    "related": [
+      "mavis2024",
+      "icra2022a",
+      "opengv2025"
+    ],
+    "seoTitle": "TXR-SLAM: Hilti Challenge 2023 System Explained",
+    "description": "Read how TXR-SLAM combines multi-camera tracking, IMU fusion and global refinement for Hilti 2023. System summary and original technical report."
+  },
+  "doctoral-thesis2021": {
+    "topic": "Geometry & SLAM",
+    "summary": "This PhD thesis studies localization and mapping with surround-view multi-camera systems and event cameras, linking sensor geometry, vehicle motion constraints and continuous-time estimation.",
+    "question": "What connects surround-view cameras and event-based localization?",
+    "problem": "Both architectures offer alternatives to conventional vision-only navigation: wider geometric coverage in one case, and precise change measurements under difficult imaging conditions in the other.",
+    "method": [
+      "The multi-camera work covers metric-scale initialization, relative motion and spline-based trajectory refinement.",
+      "The event-camera work investigates globally optimized motion estimation and joint motion–structure estimation through volumetric contrast."
+    ],
+    "interpretation": "The thesis connects front-end initialization with back-end refinement across complementary sensing architectures. This overview follows the ANU repository abstract; individual papers linked below provide focused technical treatments.",
+    "scope": "The chapters address different assumptions and motion models. Their guarantees should be read individually rather than combined into a universal navigation claim.",
+    "faq": [
+      {
+        "q": "Where is the official thesis record?",
+        "a": "The Australian National University's open research repository hosts the thesis record and download."
+      }
+    ],
+    "related": [
+      "icvs2017",
+      "icra2021",
+      "sensors2022"
+    ],
+    "seoTitle": "Novel Camera Architectures for Localization & Mapping",
+    "description": "Yifu Wang’s ANU PhD thesis on surround-view cameras and event-based localization. Research overview, related papers and official thesis record."
+  },
+  "sensors2022": {
+    "topic": "Event-based vision",
+    "summary": "This event-camera visual odometry method jointly estimates motion and scene structure by warping viewing rays continuously and maximizing their concentration in a 3D volume.",
+    "question": "How can event-based odometry handle both translation and rotation?",
+    "problem": "Simple image-plane warps cannot describe every event generated by a moving camera in a scene with varying depth. Translation makes the apparent motion depend on the unknown 3D structure.",
+    "method": [
+      "Events become viewing rays whose positions depend on a continuous camera-motion model.",
+      "Volumetric contrast maximization favors motion and structure estimates that make those rays agree in 3D, allowing joint optimization."
+    ],
+    "interpretation": "Moving the alignment objective from a 2D image to a volume expands the scene geometry that the method can represent. The paper evaluates localization and reconstruction with a single event camera, including challenging visual conditions.",
+    "scope": "The optimization still needs informative event measurements and an appropriate motion representation. A 3D objective should not be confused with a guarantee of globally correct reconstruction for every scene.",
+    "faq": [
+      {
+        "q": "Why optimize contrast in 3D rather than only in an image?",
+        "a": "A volume can represent depth-dependent event motion caused by translation through a nonplanar scene."
+      }
+    ],
+    "related": [
+      "eccv2020",
+      "tpami2021",
+      "icra2022b"
+    ],
+    "seoTitle": "Event Camera Odometry with Volumetric Contrast",
+    "description": "Learn how continuous ray warping and volumetric contrast support event-camera odometry and 3D structure estimation. Summary and source paper."
+  },
+  "icra2022a": {
+    "topic": "Geometry & SLAM",
+    "summary": "This paper generalizes the hand–eye calibration constraint to multi-perspective camera systems, providing a closed-form route to calibrating camera rigs against an externally tracked reference.",
+    "question": "How can a non-overlapping camera rig be calibrated to a tracking system?",
+    "problem": "A rig with many viewpoints does not necessarily share a common field of view. Extending conventional single-camera hand–eye calibration requires a model that accounts for all camera perspectives and their relationship to the tracked base.",
+    "method": [
+      "A generalized multi-eye-to-base constraint relates camera observations to externally measured motion.",
+      "The formulation yields a closed-form calibration solution and connects to the equivalent multi-eye-in-hand configuration."
+    ],
+    "interpretation": "The result makes calibration tractable for larger multi-perspective systems, including cameras with non-overlapping views. The paper compares accuracy and efficiency with other closed-form approaches.",
+    "scope": "The setup uses external motion information and requires measurements that constrain the calibration. It should not be read as a claim that arbitrary rigs can be calibrated without external reference data.",
+    "faq": [
+      {
+        "q": "Does this calibration method require all cameras to see the same scene?",
+        "a": "It is designed for multi-perspective rigs and can address non-overlapping camera configurations through the generalized calibration constraint."
+      }
+    ],
+    "related": [
+      "mavis2024",
+      "opengv2025",
+      "icvs2017"
+    ],
+    "seoTitle": "Multi-Camera Calibration with Generalized Hand–Eye",
+    "description": "A research summary of generalized hand–eye calibration for multi-perspective camera rigs. Method explained, assumptions and ICRA 2022 paper."
+  },
+  "icra2022b": {
+    "topic": "Event-based vision",
+    "summary": "DEVO combines a depth camera with an event camera for visual odometry, aligning semidense geometry with event-derived time surfaces to track motion in challenging lighting and fast movement.",
+    "question": "How do depth measurements complement an event camera?",
+    "problem": "Events capture rapid brightness changes but do not directly provide scene depth. A depth sensor supplies geometry that can support motion estimation when ordinary image tracking becomes difficult.",
+    "method": [
+      "A calibrated depth–event camera setup associates depth geometry with the event view.",
+      "Semidense 3D-to-2D edge alignment compares warped geometry with event time surfaces to estimate motion."
+    ],
+    "interpretation": "The sensor pairing separates geometric measurement from high-temporal-resolution tracking. The paper evaluates real-time odometry on public and collected sequences, including conditions with fast motion or difficult illumination.",
+    "scope": "The method depends on valid depth observations and accurate calibration between sensors. Improvements under the tested challenging conditions do not imply that depth sensing succeeds on every material or at every range.",
+    "faq": [
+      {
+        "q": "Is DEVO an event-only odometry method?",
+        "a": "No. It uses a depth–event sensor combination, with depth providing geometry for event-based alignment."
+      }
+    ],
+    "related": [
+      "cross-modal-tracking2024",
+      "sensors2022",
+      "iros2021"
+    ],
+    "seoTitle": "DEVO: Depth–Event Camera Visual Odometry",
+    "description": "How DEVO combines depth geometry and event sensing for visual odometry in challenging conditions. ICRA 2022 summary, interpretation and paper."
+  },
+  "iros2021": {
+    "topic": "Event-based vision",
+    "summary": "Dynamic Event Camera Calibration uses motion between an event camera and a conventional calibration pattern to estimate camera parameters, followed by continuous-time refinement.",
+    "question": "How can an event camera observe a standard calibration target?",
+    "problem": "An event camera responds to brightness changes, so a stationary camera looking at a stationary board produces little useful evidence. Calibration must account for how motion creates event observations.",
+    "method": [
+      "Relative motion makes the ordinary calibration pattern visible in the event stream, from which target features are extracted.",
+      "Conventional initialization is followed by multi-segment continuous-time refinement of the calibration estimate."
+    ],
+    "interpretation": "The approach makes ordinary calibration patterns useful for event sensing through a motion-aware estimation process. It connects asynchronous observations to familiar camera calibration geometry.",
+    "scope": "Successful calibration requires suitable motion and observable target features. The continuous-time treatment addresses event timing; it does not remove the need for well-conditioned calibration data.",
+    "faq": [
+      {
+        "q": "Why is motion necessary for this calibration procedure?",
+        "a": "Events are triggered by brightness changes. Moving the camera or target creates the measurements needed to observe the pattern."
+      }
+    ],
+    "related": [
+      "icra2022b",
+      "sensors2022",
+      "icra2022a"
+    ],
+    "seoTitle": "Dynamic Event Camera Calibration Explained",
+    "description": "Learn how motion and continuous-time refinement enable event camera calibration with an ordinary pattern. IROS 2021 summary and source paper."
+  },
+  "icra2021": {
+    "topic": "Geometry & SLAM",
+    "summary": "This paper uses B-splines to incorporate smooth, non-holonomic vehicle motion into visual localization and mapping, refining trajectories within six-degree-of-freedom bundle adjustment.",
+    "question": "How can a vehicle's motion constraints improve visual SLAM?",
+    "problem": "A wheeled vehicle typically cannot move sideways freely. Treating each camera pose independently ignores this useful structure, particularly when visual measurements are weak or ambiguous.",
+    "method": [
+      "A continuous-time B-spline represents the vehicle trajectory instead of relying only on disconnected pose estimates.",
+      "Hard or soft non-holonomic constraints are incorporated into bundle adjustment to model smooth vehicle motion more faithfully."
+    ],
+    "interpretation": "The method moves the motion prior into trajectory optimization itself. Simulation and real-data experiments examine how this improves robustness when visual evidence degrades.",
+    "scope": "The prior is appropriate when the vehicle follows the assumed non-holonomic behavior. Significant sideways slip or motion outside that model can weaken its usefulness.",
+    "faq": [
+      {
+        "q": "Is this a purely planar pose estimator?",
+        "a": "The paper imposes vehicle trajectory constraints within a 6-DoF bundle-adjustment framework, rather than only solving independent planar pose pairs."
+      }
+    ],
+    "related": [
+      "icra2020",
+      "cvpr2019",
+      "opengv2025"
+    ],
+    "seoTitle": "B-Spline Visual SLAM for Ground Vehicles",
+    "description": "How B-splines incorporate non-holonomic vehicle motion into visual localization and mapping. ICRA 2021 research summary and original paper."
+  },
+  "tpami2021": {
+    "topic": "Event-based vision",
+    "summary": "This paper develops globally optimal contrast maximization for event-camera motion models, using branch-and-bound search with recursive bounds to avoid dependence on a favorable initial guess.",
+    "question": "Can event contrast maximization avoid local optima?",
+    "problem": "Warping events with the correct motion tends to sharpen their accumulated representation. However, the contrast objective is nonconvex, so local optimization can converge to an incorrect solution.",
+    "method": [
+      "Branch-and-bound partitions the allowed motion-parameter space and compares provable upper and lower objective bounds.",
+      "Recursive bounds support six contrast functions and the motion-estimation problems studied in the paper."
+    ],
+    "interpretation": "The contribution changes the optimization guarantee for the formulated contrast objective. It provides a way to reason about the best solution within a model and search domain, rather than accepting the result of a local optimizer.",
+    "scope": "Global optimality applies to the stated objective, motion model and search domain. It does not mean every physical scene satisfies that model, nor does it establish real-time performance for arbitrary configurations.",
+    "faq": [
+      {
+        "q": "Does globally optimal mean the estimated motion is always physically correct?",
+        "a": "No. It means the optimization finds the global optimum of its specified objective under its assumptions. Model mismatch and measurement quality remain relevant."
+      }
+    ],
+    "related": [
+      "eccv2020",
+      "sensors2022",
+      "doctoral-thesis2021"
+    ],
+    "seoTitle": "Globally Optimal Contrast for Event Cameras",
+    "description": "Understand branch-and-bound contrast maximization for event-camera motion: its method, optimality assumptions and scope. TPAMI paper and PDF."
+  },
+  "eccv2020": {
+    "topic": "Event-based vision",
+    "summary": "This work derives a globally optimal contrast-maximization solution for event-camera motion estimation, focusing on the fronto-parallel geometry of a downward-looking ground-vehicle camera.",
+    "question": "How can a downward-looking event camera estimate ground-vehicle motion?",
+    "problem": "Motion compensation can align ground-plane events, but optimizing alignment contrast locally can depend strongly on initialization. The paper studies a global solution within the relevant motion model.",
+    "method": [
+      "A homographic warp describes event motion under the fronto-parallel configuration.",
+      "Branch-and-bound with bounds for six contrast functions searches for the best motion parameters without requiring an initial motion guess."
+    ],
+    "interpretation": "The restricted geometry makes a meaningful global optimization result possible. It is a foundation for the broader study of globally optimal event contrast maximization in the later journal paper.",
+    "scope": "The camera and scene configuration are central assumptions. This result should not be generalized to unrestricted 6-DoF movement through arbitrary 3D scenes.",
+    "faq": [
+      {
+        "q": "What camera configuration is central to this paper?",
+        "a": "The work focuses on fronto-parallel motion, including a downward-looking event camera on an autonomous ground vehicle."
+      }
+    ],
+    "related": [
+      "tpami2021",
+      "sensors2022",
+      "icra2021"
+    ],
+    "seoTitle": "Globally Optimal Event Camera Motion Estimation",
+    "description": "A summary of globally optimal event-camera motion estimation for fronto-parallel ground-vehicle motion. ECCV 2020 method, scope and sources."
+  },
+  "icra2020": {
+    "topic": "Geometry & SLAM",
+    "summary": "This paper improves frame-to-frame motion estimation for vehicle-mounted surround-view cameras, addressing planar-motion degeneracies with a geometric two-view optimization.",
+    "question": "Why can constrained vehicle motion be difficult for surround-view odometry?",
+    "problem": "Known camera baselines do not remove every motion degeneracy. A vehicle's planar, non-holonomic movement can make some relative-pose configurations difficult to estimate reliably.",
+    "method": [
+      "The relative-motion formulation handles planar displacements encountered by vehicle-mounted surround-view camera systems.",
+      "A two-view refinement minimizes a geometrically meaningful error without adding 3D scene-point optimization variables."
+    ],
+    "interpretation": "The work strengthens the initialization and local motion-estimation part of a SLAM pipeline. Avoiding point variables keeps the two-view problem focused on the relative motion itself.",
+    "scope": "Frame-to-frame accuracy is distinct from long-term map consistency. Loop closure or trajectory-level optimization is still a separate part of a complete mapping system.",
+    "faq": [
+      {
+        "q": "Does this method optimize a full 3D map for each frame pair?",
+        "a": "Its two-view optimization avoids 3D point variables and focuses on a geometric error for relative motion."
+      }
+    ],
+    "related": [
+      "icvs2017",
+      "icra2021",
+      "opengv2025"
+    ],
+    "seoTitle": "Reliable Surround-View Camera Motion Estimation",
+    "description": "How geometric two-view optimization improves motion estimation for vehicle-mounted surround-view cameras. ICRA 2020 summary and source paper."
+  },
+  "cvpr2019": {
+    "topic": "Geometry & SLAM",
+    "summary": "This paper estimates non-holonomic ground-vehicle motion from one tracked feature across multiple views, using a constrained motion model to derive a compact polynomial solution.",
+    "question": "When can one feature provide enough information for vehicle motion estimation?",
+    "problem": "General camera motion usually requires several correspondences. A ground vehicle's motion constraints, combined with observations over more than two views, can supply additional structure that reduces the necessary visual input.",
+    "method": [
+      "The formulation assumes locally circular, constant-speed non-holonomic motion and follows a point or vertical-line feature over multiple views.",
+      "Algebraic reductions yield a univariate polynomial for the motion-estimation problem."
+    ],
+    "interpretation": "The result shows how temporal observations and a strong physical motion prior can substitute for additional simultaneous features. The paper compares the method with a one-point, two-view alternative using simulated and real data.",
+    "scope": "The single-feature result depends on the specified motion model and multi-view observations. It is not a general one-point solution for arbitrary 6-DoF camera motion.",
+    "faq": [
+      {
+        "q": "Does one correspondence mean only two images are needed?",
+        "a": "No. The contribution uses a feature observed across multiple views, together with the assumed ground-vehicle motion model."
+      }
+    ],
+    "related": [
+      "icra2020",
+      "icra2021",
+      "icvs2017"
+    ],
+    "seoTitle": "Ground-Vehicle Motion from One Feature Across Views",
+    "description": "How non-holonomic constraints support vehicle motion estimation from a single feature across multiple views. CVPR 2019 summary and paper."
+  },
+  "icvs2017": {
+    "topic": "Geometry & SLAM",
+    "summary": "This paper studies metric-scale initialization for visual odometry with non-overlapping multi-perspective cameras, including the motion degeneracies that can make scale unobservable.",
+    "question": "Does a known multi-camera baseline always make motion scale observable?",
+    "problem": "A calibrated rig has metric geometry, yet certain motions still fail to constrain translation scale. A reliable odometry pipeline must recognize and address this during initialization.",
+    "method": [
+      "The paper analyzes scale initialization in a non-overlapping multi-perspective setup.",
+      "Its solution is integrated into a real-time odometry pipeline and evaluated with simulated and real observations."
+    ],
+    "interpretation": "The work distinguishes possessing a physical baseline from obtaining informative measurements of scale. This observability issue is an important starting point for later vehicle-mounted surround-view odometry research.",
+    "scope": "The solution concerns calibrated multi-perspective geometry. It should not be interpreted as recovering absolute scale from an arbitrary uncalibrated monocular video without additional information.",
+    "faq": [
+      {
+        "q": "Can a calibrated rig still encounter scale ambiguity?",
+        "a": "Yes. The paper studies degenerate motions under which the available observations do not sufficiently constrain metric scale."
+      }
+    ],
+    "related": [
+      "icra2020",
+      "opengv2025",
+      "doctoral-thesis2021"
+    ],
+    "seoTitle": "Scale Initialization in Multi-Camera Visual Odometry",
+    "description": "Why metric scale can remain ambiguous in non-overlapping camera rigs, and how scale initialization addresses it. ICVS 2017 summary and paper."
+  }
+}

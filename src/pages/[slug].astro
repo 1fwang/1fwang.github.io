@@ -1,9 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import pubs from '../data/publications.json';
+import notes from '../data/research-notes.json';
 export function getStaticPaths(){return pubs.map(p=>({params:{slug:p.slug},props:{paper:p}}))}
 const {paper:p}=Astro.props;
-const description=p.abstract||p.summary;
-const schema={'@context':'https://schema.org','@type':'ScholarlyArticle',headline:p.title,...(p.date?{datePublished:p.date}:{}),author:p.author.split(',').map(name=>({'@type':'Person',name:name.trim().replace(/[.*#]+$/,'')})),url:`https://1fwang.github.io/${p.slug}/`,...(p.image?{image:'https://1fwang.github.io'+p.image}:{}),description};
+const n=notes[p.slug as keyof typeof notes];
+const company='company' in n && n.company;
+const url=`https://1fwang.github.io/${p.slug}/`;
+const primary=p.pdf || p.paperurl;
+const sources=[{label:p.paperurl.includes('arxiv.org')?'arXiv — paper record and versions':p.slug==='doctoral-thesis2021'?'ANU — official thesis record':p.slug==='txr-slam2023'?'Hilti Challenge — original technical report':'Publisher — original publication record',url:p.paperurl,kind:'Primary source'}];
+if(p.pdf && p.pdf!==p.paperurl) sources.push({label:p.pdf.startsWith('/')?'Full paper — author-hosted PDF':'Full paper — PDF',url:p.pdf,kind:'Primary source'});
+if(p.pdf?.includes('arxiv.org') && !p.paperurl.includes('arxiv.org')) sources.push({label:'arXiv — preprint and version history',url:p.pdf.replace('/pdf/','/abs/'),kind:'Preprint'});
+if(p.project) sources.push({label:p.project.includes('github.com/')?'Code — repository':'Project — demos and resources',url:p.project,kind:'Research resource'});
+if(p.slug==='triplet-tuning2026') sources.push({label:'OpenReview — TMLR review record',url:'https://openreview.net/forum?id=lyn2BgKQ8F',kind:'Publication record'});
+if(p.scholar) sources.push({label:'Google Scholar — bibliographic listing',url:p.scholar,kind:'Metadata index'});
+const articleId=url+'#paper';
+const schema={'@context':'https://schema.org','@graph':[
+ {'@type':'ScholarlyArticle','@id':articleId,headline:p.title,...(p.date?{datePublished:p.date}:{}),author:p.author.split(',').map((name:string)=>({'@type':'Person',name:name.trim().replace(/[.*#]+$/,'')})),url,description:n.summary,keywords:n.topic,...(p.image?{image:'https://1fwang.github.io'+p.image}:{}),sameAs:p.paperurl,...(p.pdf?{encoding:{'@type':'MediaObject',contentUrl:new URL(p.pdf,'https://1fwang.github.io').href,encodingFormat:'application/pdf'}}:{})},
+ {'@type':'Article','@id':url+'#research-note',headline:`${p.title}: research summary and interpretation`,description:n.summary,dateModified:'2026-09-26',author:{'@id':'https://1fwang.github.io/#person'},about:{'@id':articleId},mainEntityOfPage:url,inLanguage:'en',citation:sources.filter(s=>s.kind!=='Metadata index').map(s=>new URL(s.url,'https://1fwang.github.io').href)},
+ {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:'https://1fwang.github.io/'},{'@type':'ListItem',position:2,name:'Publications',item:'https://1fwang.github.io/publications/'},{'@type':'ListItem',position:3,name:p.title,item:url}]}
+]};
 ---
-<Layout title={`${p.title} — Yifu Wang`} description={description.length>160?description.slice(0,157)+'…':description} paper={p}><script type="application/ld+json" set:html={JSON.stringify(schema)}/><article class="wrap page detail"><a class="text-link" href="/publications/">← All research</a><h1>{p.title}</h1><p>{p.author}</p><p class="muted">{p.venue} · {p.year || p.date.slice(0,4)}</p><div class="paper-links">{p.pdf && <a class="button" href={p.pdf}>Read paper ↗</a>}{p.bib && <a href={p.bib}>BibTeX ↗</a>}<a href={p.paperurl}>Publication source ↗</a>{p.project && <a href={p.project}>Project / Code ↗</a>}{p.scholar && <a href={p.scholar}>Google Scholar ↗</a>}</div>{p.image && <figure class="paper-figure"><a href={p.image} aria-label="Open full-size research figure"><img src={p.image} alt={p.imageCaption || `Research overview for ${p.title}`} width={p.imageWidth} height={p.imageHeight}/></a>{p.imageSource && <figcaption>{p.imageCaption} <a href={p.imageSource}>Figure source ↗</a></figcaption>}</figure>}<h2>{p.abstract?'Abstract':'Research overview'}</h2><p>{description}</p>{p.dateNote && <p class="muted">{p.dateNote}</p>}{p.sourceChecked && <p class="muted">{p.venueSource ? `Publication venue ${p.venueSource.toLowerCase()}. Other metadata checked against Google Scholar on ${p.sourceChecked}.` : `Publication metadata checked against Google Scholar on ${p.sourceChecked}.`} Overview summarizes the research description.</p>}</article></Layout>
+<Layout title={`${n.seoTitle} | Yifu Wang`} description={n.description} paper={p}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)}/>
+  <article class="wrap page detail research-note">
+    <a class="text-link" href="/publications/">← Publications & research insights</a>
+    <p class="eyebrow note-topic">{n.topic}</p>
+    <h1>{p.title}</h1>
+    <p class="paper-authors">{p.author}</p>
+    <p class="muted">{p.venue} · {p.year || p.date.slice(0,4)}</p>
+    <div class="paper-links"><a class="button" href={primary}>Read original paper ↗</a><a href="#sources">Sources & code ↓</a>{p.bib && <a href={p.bib}>BibTeX ↗</a>}</div>
+    <section class="research-summary" aria-labelledby="summary"><p class="eyebrow" id="summary">RESEARCH SUMMARY</p><p>{n.summary}</p><a class="text-link" href={primary}>Read the supporting paper ↗</a></section>
+    <p class="note-byline">Research note by <a href="/#about">Yifu Wang</a> · Updated <time datetime="2026-09-26">September 26, 2026</time></p>
+    {company && <aside class="company-note"><span class="eyebrow">V2FUN.AI RESEARCH</span><p>This is a research project at <a href="https://v2fun.ai/">Vertex Lab / V2Fun.ai ↗</a>. Explore <a href="https://v2fun.ai/">V2Fun.ai</a> for the company's AI creation platform.</p></aside>}
+    {'participation' in n && <aside class="company-note"><span class="eyebrow">RESEARCH COLLABORATION</span><p>{n.participation} <a href="https://v2fun.ai/">V2Fun.ai ↗</a>.</p></aside>}
+    <nav class="note-toc" aria-label="On this page"><a href="#problem">Research question</a><a href="#method">Method</a><a href="#interpretation">Interpretation</a><a href="#scope">Scope</a><a href="#questions">Q&A</a><a href="#sources">Sources</a></nav>
+    {p.image && <figure class="paper-figure"><a href={p.image} aria-label="Open full-size research figure"><img src={p.image} alt={p.imageCaption || `Research overview for ${p.title}`} width={p.imageWidth} height={p.imageHeight} loading="lazy"/></a>{p.imageSource && <figcaption>{p.imageCaption} <a href={p.imageSource}>Original figure source ↗</a></figcaption>}</figure>}
+    <section id="problem"><p class="eyebrow">THE RESEARCH QUESTION</p><h2>{n.question}</h2><p>{n.problem} <a class="source-ref" href={primary} aria-label="Read the research motivation in the original paper">[Paper]</a></p></section>
+    <section id="method"><h2>How the method works</h2><ol class="method-list">{n.method.map(step=><li>{step}</li>)}</ol><a class="text-link" href={primary}>Method and experiments in the original paper ↗</a></section>
+    <section id="interpretation"><p class="eyebrow">RESEARCH INTERPRETATION</p><h2>What this contribution means</h2><p>{n.interpretation}</p><p class="note-caption">This section explains the contribution in context. For experimental protocols, numerical results and comparisons, consult the <a href={primary}>original paper</a>.</p></section>
+    <section id="scope"><h2>Scope and limitations</h2><p>{n.scope} <a class="source-ref" href={primary} aria-label="Read the assumptions and evaluation scope in the original paper">[Paper]</a></p></section>
+    <section id="questions"><h2>Questions about this research</h2>{n.faq.map(item=><div class="research-question"><h3>{item.q}</h3><p>{item.a}</p></div>)}</section>
+    {p.abstract && <details class="original-abstract"><summary>Read the original abstract</summary><p>{p.abstract}</p><a class="text-link" href={p.paperurl}>Original publication record ↗</a></details>}
+    <section id="sources"><h2>Sources, paper & code</h2><p class="note-caption">Primary research sources support the summary above. Project resources provide demonstrations or implementations; Google Scholar is a bibliographic index.</p><ul class="source-list">{sources.map(s=><li><span>{s.kind}</span><a href={s.url}>{s.label} ↗</a><small>{new URL(s.url,'https://1fwang.github.io').hostname}</small></li>)}</ul>{p.dateNote && <p class="note-caption">{p.dateNote}</p>}{p.venueSource && <p class="note-caption">Publication venue: {p.venueSource}. The research-note update date is separate from the paper's publication date.</p>}</section>
+    <section id="related"><h2>Related research</h2><div class="related-research">{n.related.map(slug=>{const r=pubs.find(x=>x.slug===slug)!;return <a href={`/${r.slug}/`}><span class="eyebrow">{r.year || r.date.slice(0,4)}</span><strong>{r.title}</strong><span>Read summary & interpretation ↗</span></a>})}</div></section>
+  </article>
+</Layout>
