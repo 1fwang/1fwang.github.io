@@ -1,0 +1,19 @@
+<section class="visitor-counter wrap" aria-label="Visitor statistics">
+  <div><p class="eyebrow">AROUND THE WORLD</p><p>Visitors to this website</p><a class="text-link" href="https://info.flagcounter.com/IDql">View visitor statistics ↗</a></div>
+  <a class="visitor-map" href="https://info.flagcounter.com/IDql" aria-label="View Flag Counter visitor statistics">
+    <span id="visitor-preview">Flag Counter · Visitor map<br/><small>Live statistics appear on the published website.</small></span>
+    <img id="visitor-map-image" data-counter-src="https://s01.flagcounter.com/map/IDql/size_s/txt_000000/border_CCCCCC/pageviews_1/viewers_0/flags_0/" alt="Flag Counter map showing visitors by country and page views" hidden decoding="async"/>
+  </a>
+</section>
+<script>
+// Reuse the original counter. Local previews must not increment live totals.
+if (location.hostname === '1fwang.github.io') {
+  const map = document.querySelector<HTMLImageElement>('#visitor-map-image');
+  const preview = document.querySelector<HTMLElement>('#visitor-preview');
+  if (map?.dataset.counterSrc) {
+    map.addEventListener('load', () => {map.hidden = false; if(preview) preview.hidden = true;});
+    if (preview) preview.textContent = 'View visitor statistics ↗';
+    map.src = map.dataset.counterSrc;
+  }
+}
+</script>
